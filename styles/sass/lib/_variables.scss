@@ -1,0 +1,39 @@
+/*-----------------*\
+|     Variables     |
+\*-----------------*/
+
+$theme-default : ( 
+//  Branding Color 
+
+    color-primary: rgb(102, 46, 28),
+    color-primary-light: lighten(rgb(102, 46, 28), .5),
+    color-primary-dark: darken(rgb(102, 46, 28), .5),
+    color-secondary: rgb(201, 166, 107),
+    color-secondary-light: lighten(rgb(201, 166, 107), .5),
+    color-secondary-dark: darken(rgb(201, 166, 107), .5),
+
+//  GrayScale
+
+    color-black: rgb(0,0,0),
+    color-darkgrey: rgb(77, 77, 77),
+    color-grey: rgb(115, 115, 115),
+    color-lightgrey: #bfbfbf,
+    color-white: rgb(255,255,255),
+
+//  LIST ITEM COLOR
+
+    font-color-w: white,
+    font-color-b: black,
+
+
+);
+
+//      Constants
+
+$border-radius: 4px;
+$padding: .5rem;
+
+// FONT FAMILY
+
+$basefontfamily: (Verdana, Geneva, Tahoma, sans-serif);
+$basefontsize: 16px,

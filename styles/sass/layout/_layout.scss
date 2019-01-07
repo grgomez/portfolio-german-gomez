@@ -1,0 +1,42 @@
+/*------------------------*\ 
+|         $LAYOUT          |
+\*------------------------*/ 
+
+body{
+    font-family: $basefontfamily;
+}
+
+header{
+
+    @extend %flexBetweenCenter;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: map-get($theme-default,color-primary);
+    padding: $padding;
+
+
+    figure.main-logo{
+
+        max-width: 45px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    ul{
+        li {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            a{
+                color:map-get($theme-default, color-white );
+            }
+        }
+    }
+
+}
+
+section{
+    box-sizing: border-box;
+}

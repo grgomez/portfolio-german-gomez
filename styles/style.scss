@@ -1,0 +1,33 @@
+//      Main Variables
+@import '../styles/sass/lib/variables';
+@import '../styles/sass/lib/utilities';
+
+//      Layout
+@import '../styles/sass/layout/layout';
+
+
+/* Reset Default */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+figure{
+    margin:0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    min-height: 80vh;
+}

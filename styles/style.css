@@ -1,0 +1,82 @@
+/*-----------------*\
+|     Variables     |
+\*-----------------*/
+/*-----------------*\
+|     Utilities     |
+\*-----------------*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*------------------------*\ 
+|         $LAYOUT          |
+\*------------------------*/
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #662e1c;
+  padding: 0.5rem;
+}
+
+header figure.main-logo {
+  max-width: 45px;
+}
+
+header figure.main-logo img {
+  width: 100%;
+}
+
+header ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header ul li a {
+  color: white;
+}
+
+section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Reset Default */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  min-height: 80vh;
+}
+/*# sourceMappingURL=style.css.map */
