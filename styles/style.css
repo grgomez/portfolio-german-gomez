@@ -2,6 +2,9 @@
 |     Variables     |
 \*-----------------*/
 /*-----------------*\
+|     Functions     |
+\*-----------------*/
+/*-----------------*\
 |     Utilities     |
 \*-----------------*/
 header {
@@ -28,7 +31,7 @@ header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #662e1c;
-  padding: 0.5rem;
+  padding: 0.8rem;
 }
 
 header figure.main-logo {
@@ -48,9 +51,54 @@ header ul li a {
   color: white;
 }
 
+footer {
+  background-color: #c9a66b;
+  height: 50px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: .5em;
+}
+
+footer span {
+  font-weight: 400;
+}
+
+footer span a {
+  font-weight: bold;
+}
+
+footer figure {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  top: 5px;
+}
+
+footer figure img {
+  height: 95px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
 section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-shadow: 0 0 .5em grey;
+          box-shadow: 0 0 .5em grey;
+  margin: .5em;
+  padding: 0.8rem;
+  border-radius: 4px;
 }
 
 /* Reset Default */
