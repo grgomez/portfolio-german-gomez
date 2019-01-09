@@ -11,7 +11,7 @@ header{
     @extend %flexBetweenCenter;
     width: 100%;
     box-sizing: border-box;
-    background-color: map-get($theme-default,color-primary);
+    background-color: colorByTheme($active-theme,color-primary);
     padding: $padding;
 
 
@@ -30,13 +30,51 @@ header{
             margin-right: 10px;
 
             a{
-                color:map-get($theme-default, color-white );
+                color:colorByTheme($active-theme, color-white );
             }
         }
     }
 
 }
 
+footer{
+    background-color: colorByTheme($active-theme,color-secondary);
+    height: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: .5em;
+
+    span{
+       font-weight: 400;
+       a{
+           font-weight: bold;
+       } 
+    }
+
+    figure {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        top: 5px;
+
+        img{
+            height: 95px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+        }
+    }
+}
+
 section{
     box-sizing: border-box;
+    box-shadow: 0 0 .5em grey;
+    margin: .5em;
+    padding: $padding;
+    border-radius: $border-radius;
 }
