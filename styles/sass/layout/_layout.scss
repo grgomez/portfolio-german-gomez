@@ -48,6 +48,20 @@ body {
    }
 }
 
+@media screen and (max-width:767px){
+    .header {         
+        padding: 1rem;
+    }
+
+    &__logo {
+        img {
+           min-width: 50px;
+        }
+     }
+
+ }
+
+
 /*------------------------*\ 
 |      BANNER STYLES       |
 \*------------------------*/ 
@@ -80,6 +94,25 @@ body {
    }
 }
 
+@media screen and (max-width:767px){
+    .banner {         
+        &__info {
+
+            width: 80%;
+         }
+
+         &__name {
+            font-size: 10rem;
+         }
+         
+         &__description {
+            font-size: 1.5rem;
+         }
+    }
+ }
+
+
+
 /*------------------------*\ 
 |    PORTFOLIO STYLES      |
 \*------------------------*/ 
@@ -108,77 +141,30 @@ body {
       padding-bottom: 3rem;
    }
 
-   &__card {
-      background: colorByTheme($active-theme, color-lightgrey2);
-      width: 92%;
-      margin: 0 auto;
-      padding: 2rem 1rem 2rem 3.5rem;
-      border-radius: 2px;
-      box-shadow: 0 .3rem 1rem colorByTheme($active-theme, color-black);
-      display: flex;
-
-      &:not(:last-child) {
-         margin-bottom: 3rem;
-      }
-
-      &__info {
-         font-size: $basefontsize;
-         flex: 1;
-      }
-
-      &__title {
-         font-size: 3rem;
-         font-weight: 900;
-         text-transform: uppercase;
-         color: colorByTheme($active-theme, color-secondary);
-         text-shadow: .1rem .1rem .1rem colorByTheme($active-theme, color-black);
-         padding-bottom: .6rem;
-      }
-
-      &__tech {
-         font-size: inherit;
-         font-weight: 400;
-         text-transform: uppercase;
-         color: colorByTheme($active-theme, color-grey);
-         margin-bottom: 2rem;
-         padding-bottom: .5rem;
-         border-bottom: 1px solid colorByTheme($active-theme, color-grey);
-      }
-
-      &__date {
-         padding-bottom: .4rem;
-      }
-
-      &__link {
-         padding-bottom: 1rem;
-         
-         &-content {
-            color: inherit;
-            text-decoration: underline;
-            padding: .2rem .5rem;
-            transition: all .3s;
-
-            &:hover {
-               background: colorByTheme($active-theme, color-lightgrey);
-            }
-         }
-      }
-
-      &__description {
-         text-align: justify;
-      }
-
-      &__figure {
-         flex: 1;
-      }
-
-      &__image {
-         width: 90%;
-         display: block;
-         margin: 0 auto;
-      }
-   }
 }
+
+@media screen and (max-width:767px){
+    .portfolio {
+ 
+        &__border {
+            display: none;
+        }
+
+        &__content {
+            padding: 0;
+            padding-top: 1.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        &__heading {
+            font-size: 3rem;
+            padding-bottom: 1.5rem;
+            text-align: center;
+        }
+
+    }
+ }
 
 
 
@@ -214,7 +200,6 @@ footer {
          height: 95px;
          background-color: white;
          border-radius: 50%;
-         position: absolute;
       }
    }
 }

@@ -6,6 +6,9 @@
 //      Layout
 @import '../styles/sass/layout/layout';
 
+//      Components
+@import '../styles/sass/components/portfolio';
+
 
 /* Reset Default */
 
@@ -42,7 +45,7 @@ a{
 }
 
 ::-webkit-scrollbar-track {
-   background: #f1f1f1; 
+   background: #3e3e3e; 
 }
 
 ::-webkit-scrollbar-thumb {
