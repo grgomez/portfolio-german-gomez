@@ -43,7 +43,7 @@ body {
   font-family: "Raleway", Geneva, Tahoma, sans-serif;
 }
 
-.border--decorator {
+.border-decorator {
   background-color: #737373;
   width: 3rem;
   height: 3rem;
@@ -64,7 +64,7 @@ body {
   position: fixed;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  z-index: 1;
+  z-index: 100000000;
   font-size: 1.6rem;
 }
 
@@ -172,12 +172,12 @@ body {
 }
 
 /*------------------------*\ 
-|    ABOUT STYLES          |
+|       ABOUT STYLES       |
 \*------------------------*/
 .about {
   background-color: #bfbfbf;
   position: relative;
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
 }
 
 .about__border {
@@ -190,6 +190,106 @@ body {
 .about__content {
   padding-left: 3rem;
   padding-top: 1.5rem;
+}
+
+.about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__image-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.about__name-box {
+  position: absolute;
+  left: 30%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 1.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 2px;
+}
+
+.about__firstname, .about__lastname {
+  font-size: 7rem;
+  text-transform: uppercase;
+  color: rgba(201, 166, 107, 0.5);
+}
+
+.about__firstname {
+  font-weight: 300;
+}
+
+.about__lastname {
+  font-weight: 500;
+}
+
+.about__name-line {
+  position: absolute;
+  top: 25%;
+  left: 60%;
+  display: block;
+  width: 35%;
+  height: .1rem;
+  background-color: rgba(201, 166, 107, 0.5);
+}
+
+.about__image {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  -webkit-filter: opacity(0.8) grayscale(60%);
+          filter: opacity(0.8) grayscale(60%);
+}
+
+.about__description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.about__description-title {
+  width: 90%;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(102, 46, 28, 0.5);
+}
+
+.about__description-subtitle {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  width: 90%;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: rgba(102, 46, 28, 0.8);
+}
+
+.about__description-contentbox {
+  position: relative;
+  padding-right: 7rem;
+}
+
+.about__description-content {
+  width: 70%;
+  float: right;
+}
+
+.about__description-bar {
+  position: absolute;
+  top: .6rem;
+  height: .3rem;
+  width: 25%;
+  background-color: rgba(102, 46, 28, 0.5);
 }
 
 /*------------------------*\ 
@@ -284,8 +384,8 @@ footer figure img {
   margin: 0 auto;
   padding: 2rem;
   border-radius: 2px;
-  -webkit-box-shadow: 0 0rem 0.2rem black;
-          box-shadow: 0 0rem 0.2rem black;
+  -webkit-box-shadow: 0 0.2rem 1rem black;
+          box-shadow: 0 0.2rem 1rem black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -68,18 +68,18 @@ $basefontsize: 1.6rem;
 //      Headings
 
 %headings{
-    font-size: 5rem;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    color: colorByTheme($active-theme, color-darkgrey);
-    padding-bottom: 3rem;
-    padding-left: 2rem;
+   font-size: 5rem;
+   text-transform: uppercase;
+   letter-spacing: .2rem;
+   color: colorByTheme($active-theme, color-darkgrey);
+   padding-bottom: 3rem;
+   padding-left: 2rem;
 }
 
 @media screen and (max-width:767px){
-    %headings{
-        font-size: 3rem;
-        padding-bottom: 1.5rem;
-        text-align: center;
-    }
- }
+   %headings{
+      font-size: 3rem;
+      padding-bottom: 1.5rem;
+      text-align: center;
+   }
+}

@@ -24,10 +24,6 @@ html {
    font-size: 62.5%; // Hace que 1rem = 10px, en condiciones normales de tamaño del root 16px.
 }
 
-body {
-   // padding: 3rem;
-}
-
 ul{
    display: flex;
    list-style-type: none;
@@ -39,7 +35,6 @@ a{
 
 
 // Scroll Bar for Chrome
-
 ::-webkit-scrollbar {
    width: 5px;
 }
