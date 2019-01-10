@@ -9,26 +9,44 @@
 
 /* Reset Default */
 
-body{
-    margin: 0;
-    padding: 0;
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
 }
 
-figure{
-    margin:0;
+html {
+   font-size: 62.5%; // Hace que 1rem = 10px, en condiciones normales de tamaño del root 16px.
+}
+
+body {
+   // padding: 3rem;
 }
 
 ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style-type: none;
+   display: flex;
+   list-style-type: none;
 }
 
 a{
-    text-decoration: none;
+   text-decoration: none;
 }
 
-section{
-    min-height: 80vh;
+
+::-webkit-scrollbar {
+   width: 5px;
+}
+
+::-webkit-scrollbar-track {
+   background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+   background: colorByTheme($active-theme, color-lightgrey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: colorByTheme($active-theme, color-grey); 
 }

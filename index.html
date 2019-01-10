@@ -1,64 +1,102 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" media="screen" href="./styles/style.css" />
-    <title>Portfolio Template</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" type="text/css" media="screen" href="./styles/style.css" />
+   <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700" rel="stylesheet">
+   <title>Portfolio Template</title>
 </head>
 
 <body>
-    <header>
-        <figure class="main-logo"> <img src="./images/default-logo.png" alt="Logo Image"> </figure>
-        <div>
-            <ul>
-                <li> <a href="#portfolio"> Portafolio </a></li>
-                <li> <a href="#about"> Acerca </a></li>
-                <li> <a href="#contact"> Contactame! </a></li>
-            </ul>
-        </div>
-    </header>
+   <header class="header">
+      <figure class="header__logo"> <img src="./images/default-logo.png" alt="Logo Image"> </figure>
+      <div>
+         <ul>
+            <li> <a href="#portfolio"> Portafolio </a></li>
+            <li> <a href="#about"> Acerca </a></li>
+            <li> <a href="#contact"> Contactame! </a></li>
+         </ul>
+      </div>
+   </header>
 
-    <section id="banner">
-        <article class="banner-box">
-            <figure class="banner-box-image">
-                <img src="./images/deafult-banner.png" alt="Banner Image">
-            </figure>
-            <h1> Bienvenidos a mi pagina <b> Increible! </b> </h1>
-        </article>
-    </section>
+   <section id="banner" class="banner">
+      <div class="banner__info">
+         <p class="banner__name">Jhon Doe</p>
+         <p class="banner__description">Soy un programador web Full-Stack, me encanta node.js y ruby on rails.</p>
+      </div>
+      <!-- <svg id="Capa_1" class="banner__separator-container" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920.16 198.78"><path class="banner__separator" d="M.09,575s-5-81.06,58.89-93.07,1778.57-43,1778.57-43S1915,438,1918,384s2,191,2,191Z" transform="translate(0 -376.22)"/></svg> -->
+   </section>
 
-    <section id="portfolio">
-        <h1> Experiencia </h1>
-        <div class="portfolio-card">
-            <div class="portfolio-info">
-                <h1> Proyecto #1 </h1>
-                <h6> Tecnologias utilizadas </h6>
-                <p class="portfolio-date"> <b> Fecha: </b>  </p>
-                <p class="portfolio-link"> <b> Puedes visitarla en:</b> <a href="https://www.google.com" target="_blank"> www.google.com </a> </p>
-                <p class="portfolio-description"> </p>
+   <section id="portfolio" class="portfolio">
+      <div class="portfolio__border"></div>
+
+      <div class="portfolio__content">
+         <h1 class="portfolio__heading"> Portafolio </h1>
+   
+         <div class="portfolio__card">
+            <div class="portfolio__card__info">
+               <h1 class="portfolio__card__title"> Proyecto #1 </h1>
+               <h6 class="portfolio__card__tech"> Tecnologias utilizadas </h6>
+               <p class="portfolio__card__date"> <b> Fecha: </b> 30/02/1963 </p>
+               <p class="portfolio__card__link"> <b> Puedes visitarla en:</b> <a href="https://www.google.com" target="_blank" class="portfolio__card__link-content"> www.google.com </a> </p>
+               <p class="portfolio__card__description"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, nemo delectus quo voluptatem asperiores unde neque distinctio, ducimus quisquam aut enim iure mollitia fugiat impedit accusamus nisi maxime nostrum rem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur qui laudantium maxime odio dolore delectus aliquid molestias sit consectetur necessitatibus. Repellat commodi ipsam, consequatur explicabo harum repudiandae quis fuga cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic animi doloremque, aut rerum est, nulla minus quos, aperiam veritatis dicta. Quibusdam dolore, rerum corporis adipisci optio in dolores odit!Lorem</p>
             </div>
-            <figure> 
-                <img src="./images/default-image.png" > 
+            <figure class="portfolio__card__figure"> 
+               <img src="./images/default-image.gif" class="portfolio__card__image"> 
             </figure>
-        </div>
-    </section>
+         </div>
 
-    <section id="about">
-        <h1> Acerca de mi </h1>
-    </section>
+         <div class="portfolio__card">
+            <div class="portfolio__card__info">
+               <h1 class="portfolio__card__title"> Proyecto #2 </h1>
+               <h6 class="portfolio__card__tech"> Tecnologias utilizadas </h6>
+               <p class="portfolio__card__date"> <b> Fecha: </b> 08/04/2015 </p>
+               <p class="portfolio__card__link"> <b> Puedes visitarla en:</b> <a href="https://www.google.com" target="_blank" class="portfolio__card__link-content"> www.google.com </a> </p>
+               <p class="portfolio__card__description"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, nemo delectus quo voluptatem asperiores unde neque distinctio, ducimus quisquam aut enim iure mollitia fugiat impedit accusamus nisi maxime nostrum rem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur qui laudantium maxime odio dolore delectus aliquid molestias sit consectetur necessitatibus. Repellat commodi ipsam, consequatur explicabo harum repudiandae quis fuga cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic animi doloremque, aut rerum est, nulla minus quos, aperiam veritatis dicta. Quibusdam dolore, rerum corporis adipisci optio in dolores odit!Lorem</p>
+            </div>
+            <figure class="portfolio__card__figure"> 
+               <img src="./images/default-image.gif" class="portfolio__card__image"> 
+            </figure>
+         </div>
 
-    <section id="contact">
-        <h1> Contacto </h1>
-    </section>
+         <div class="portfolio__card">
+            <div class="portfolio__card__info">
+               <h1 class="portfolio__card__title"> Proyecto #3 </h1>
+               <h6 class="portfolio__card__tech"> Tecnologias utilizadas </h6>
+               <p class="portfolio__card__date"> <b> Fecha: </b> 06/09/1969 </p>
+               <p class="portfolio__card__link"> <b> Puedes visitarla en:</b> <a href="https://www.google.com" target="_blank" class="portfolio__card__link-content"> www.google.com </a> </p>
+               <p class="portfolio__card__description"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, nemo delectus quo voluptatem asperiores unde neque distinctio, ducimus quisquam aut enim iure mollitia fugiat impedit accusamus nisi maxime nostrum rem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur qui laudantium maxime odio dolore delectus aliquid molestias sit consectetur necessitatibus. Repellat commodi ipsam, consequatur explicabo harum repudiandae quis fuga cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic animi doloremque, aut rerum est, nulla minus quos, aperiam veritatis dicta. Quibusdam dolore, rerum corporis adipisci optio in dolores odit!Lorem</p>
+            </div>
+            <figure class="portfolio__card__figure"> 
+               <img src="./images/default-image.gif" class="portfolio__card__image"> 
+            </figure>
+         </div>
+   
+         
 
-    <footer class="footer">
-        <span> @Designed by <a> Capybara Code </a> </span>
-        <figure>
-            <img src="images/capybara-logo.png"> 
-        </figure>
-    </footer>
+      </div>
+      
+
+   </section>
+
+   <section id="about">
+      <h1> Acerca de mi </h1>
+   </section>
+
+   <section id="contact">
+      <h1> Contacto </h1>
+   </section>
+
+   <footer class="footer">
+      <span> @Designed by <a> Capybara Code </a> </span>
+      <figure>
+         <img src="images/capybara-logo.png"> 
+      </figure>
+   </footer>
+
+   <script src="./js/main.js"></script>
 </body>
 
 </html>
