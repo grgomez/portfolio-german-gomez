@@ -2,8 +2,8 @@
 |         $LAYOUT          |
 \*------------------------*/ 
 
-body{
-    font-family: $basefontfamily;
+body {
+   font-family: $basefontfamily;
 }
 
 /*------------------------*\ 
@@ -88,67 +88,133 @@ body{
    position: relative;
    padding-bottom: 4rem;
 
+   &__border {
+      position: absolute;
+      height: 100%;
+      width: 2rem;
+      background-color: colorByTheme($active-theme, color-grey);
+   }
 
-    figure.main-logo{
+   &__content {
+      padding-left: 3rem;
+      padding-top: 1.5rem;
+   }
 
-        max-width: 45px;
+   &__heading {
+      font-size: 5rem;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      color: colorByTheme($active-theme, color-darkgrey);
+      padding-bottom: 3rem;
+   }
 
-        img{
-            width: 100%;
-        }
-    }
+   &__card {
+      background: colorByTheme($active-theme, color-lightgrey2);
+      width: 92%;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem 3.5rem;
+      border-radius: 2px;
+      box-shadow: 0 .3rem 1rem colorByTheme($active-theme, color-black);
+      display: flex;
 
-    ul{
-        li {
-            margin-left: 10px;
-            margin-right: 10px;
+      &:not(:last-child) {
+         margin-bottom: 3rem;
+      }
 
-            a{
-                color:colorByTheme($active-theme, color-white );
+      &__info {
+         font-size: $basefontsize;
+         flex: 1;
+      }
+
+      &__title {
+         font-size: 3rem;
+         font-weight: 900;
+         text-transform: uppercase;
+         color: colorByTheme($active-theme, color-secondary);
+         text-shadow: .1rem .1rem .1rem colorByTheme($active-theme, color-black);
+         padding-bottom: .6rem;
+      }
+
+      &__tech {
+         font-size: inherit;
+         font-weight: 400;
+         text-transform: uppercase;
+         color: colorByTheme($active-theme, color-grey);
+         margin-bottom: 2rem;
+         padding-bottom: .5rem;
+         border-bottom: 1px solid colorByTheme($active-theme, color-grey);
+      }
+
+      &__date {
+         padding-bottom: .4rem;
+      }
+
+      &__link {
+         padding-bottom: 1rem;
+         
+         &-content {
+            color: inherit;
+            text-decoration: underline;
+            padding: .2rem .5rem;
+            transition: all .3s;
+
+            &:hover {
+               background: colorByTheme($active-theme, color-lightgrey);
             }
-        }
-    }
+         }
+      }
 
+      &__description {
+         text-align: justify;
+      }
+
+      &__figure {
+         flex: 1;
+      }
+
+      &__image {
+         width: 90%;
+         display: block;
+         margin: 0 auto;
+      }
+   }
 }
 
-footer{
-    background-color: colorByTheme($active-theme,color-secondary);
-    height: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    box-sizing: border-box;
-    padding: .5em;
 
-    span{
-       font-weight: 400;
-       a{
-           font-weight: bold;
-       } 
-    }
 
-    figure {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        text-align: center;
-        top: 5px;
+/*------------------------*\ 
+|      FOOTER STYLES       |
+\*------------------------*/ 
+footer {
+   background-color: colorByTheme($active-theme,color-secondary);
+   height: 50px;
+   margin-bottom: 50px;
+   display: flex;
+   align-items: center;
+   position: relative;
+   box-sizing: border-box;
+   padding: .5em;
 
-        img{
-            height: 95px;
-            background-color: white;
-            border-radius: 50%;
-            position: absolute;
-        }
-    }
-}
+   span {
+      font-weight: 400;
+      a {
+         font-weight: bold;
+      } 
+   }
 
-section{
-    box-sizing: border-box;
-    box-shadow: 0 0 .5em grey;
-    margin: .5em;
-    padding: $padding;
-    border-radius: $border-radius;
+   figure {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      text-align: center;
+      top: 5px;
+
+      img {
+         height: 95px;
+         background-color: white;
+         border-radius: 50%;
+         position: absolute;
+      }
+   }
 }

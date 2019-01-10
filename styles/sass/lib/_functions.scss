@@ -3,6 +3,6 @@
 \*-----------------*/
 
 @function colorByTheme($theme-name , $color-variant) {
-    // map inception
-    @return map-get(map-get($themes , $theme-name), $color-variant);
-  }
+   // map inception
+   @return map-get(map-get($themes , $theme-name), $color-variant);
+}
