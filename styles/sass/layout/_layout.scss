@@ -6,13 +6,87 @@ body{
     font-family: $basefontfamily;
 }
 
-header{
+/*------------------------*\ 
+|      HEADER STYLES       |
+\*------------------------*/ 
+.header {
+   @extend %flexBetweenCenter;
+   width: 100%;
+   box-sizing: border-box;
+   padding: $padding $padding*5;
+   position: fixed;
+   transition: $transition-default;
+   z-index: 1;
+   font-size: $basefontsize;
 
-    @extend %flexBetweenCenter;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: colorByTheme($active-theme,color-primary);
-    padding: $padding;
+   &__logo {
+      max-width: 5rem;
+
+      img {
+         width: 100%;
+      }
+   }
+
+   ul {
+      li {
+         margin: 0 $margin;
+         transition: $transition-default;
+
+         &:hover {
+            transform: translateY(-.2rem) scale(1.1);
+         }
+
+         a {
+            color: colorByTheme($active-theme, color-white);
+         }
+      }
+   }
+
+   &.colored {
+      background-color: colorByTheme($active-theme, color-primary-transparent);
+      box-shadow: 0 .5rem 2rem colorByTheme($active-theme, color-black);
+   }
+}
+
+/*------------------------*\ 
+|      BANNER STYLES       |
+\*------------------------*/ 
+.banner {
+   margin: 0;
+   padding: 0;
+   border-radius: 0;
+   background-image: linear-gradient(rgba(colorByTheme($active-theme, color-primary), 0.4) 0%, rgba(colorByTheme($active-theme, color-primary), 0.2)),
+   url("../images/default-fondo.jpeg");
+   height: 100vh;
+   position: relative;
+   box-shadow: none;
+   text-align: center;
+   
+   &__info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      color: colorByTheme($active-theme, color-lightgrey);
+   }
+   
+   &__name {
+      font-size: 15rem;
+   }
+   
+   &__description {
+      font-size: 3rem;
+   }
+}
+
+/*------------------------*\ 
+|    PORTFOLIO STYLES      |
+\*------------------------*/ 
+.portfolio {
+   background-color: colorByTheme($active-theme, color-lightgrey);
+   position: relative;
+   padding-bottom: 4rem;
 
 
     figure.main-logo{

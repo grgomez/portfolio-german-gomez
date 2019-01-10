@@ -7,7 +7,7 @@
 /*-----------------*\
 |     Utilities     |
 \*-----------------*/
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,28 +26,107 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header {
+/*------------------------*\ 
+|      HEADER STYLES       |
+\*------------------------*/
+.header {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #662e1c;
-  padding: 0.8rem;
+  padding: 1rem 5rem;
+  position: fixed;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 1;
+  font-size: 16px;
 }
 
-header figure.main-logo {
-  max-width: 45px;
+.header__logo {
+  max-width: 5rem;
 }
 
-header figure.main-logo img {
+.header__logo img {
   width: 100%;
 }
 
-header ul li {
+.header ul li {
+  margin: 0 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header ul li:hover {
+  -webkit-transform: translateY(-0.2rem) scale(1.1);
+          transform: translateY(-0.2rem) scale(1.1);
+}
+
+.header ul li a {
+  color: white;
+}
+
+.header.colored {
+  background-color: rgba(102, 46, 28, 0.9);
+  -webkit-box-shadow: 0 0.5rem 2rem black;
+          box-shadow: 0 0.5rem 2rem black;
+}
+
+/*------------------------*\ 
+|      BANNER STYLES       |
+\*------------------------*/
+.banner {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(102, 46, 28, 0.4)), to(rgba(102, 46, 28, 0.2))), url("../images/default-fondo.jpeg");
+  background-image: linear-gradient(rgba(102, 46, 28, 0.4) 0%, rgba(102, 46, 28, 0.2)), url("../images/default-fondo.jpeg");
+  height: 100vh;
+  position: relative;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-align: center;
+}
+
+.banner__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  color: #bfbfbf;
+}
+
+.banner__name {
+  font-size: 15rem;
+}
+
+.banner__description {
+  font-size: 3rem;
+}
+
+/*------------------------*\ 
+|    PORTFOLIO STYLES      |
+\*------------------------*/
+.portfolio {
+  background-color: #bfbfbf;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.portfolio figure.main-logo {
+  max-width: 45px;
+}
+
+.portfolio figure.main-logo img {
+  width: 100%;
+}
+
+.portfolio ul li {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-header ul li a {
+.portfolio ul li a {
   color: white;
 }
 
@@ -97,7 +176,7 @@ section {
   -webkit-box-shadow: 0 0 .5em grey;
           box-shadow: 0 0 .5em grey;
   margin: .5em;
-  padding: 0.8rem;
+  padding: 1rem;
   border-radius: 4px;
 }
 
@@ -122,6 +201,18 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
 }
 
 section {
