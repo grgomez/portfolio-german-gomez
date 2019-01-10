@@ -6,6 +6,16 @@ body {
    font-family: $basefontfamily;
 }
 
+.border--decorator{
+    background-color: colorByTheme($active-theme, color-grey);
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    border-radius: 100%;
+    top: 3rem;
+    left: 0.2rem;
+}
+
 /*------------------------*\ 
 |      HEADER STYLES       |
 \*------------------------*/ 
@@ -31,6 +41,7 @@ body {
       li {
          margin: 0 $margin;
          transition: $transition-default;
+         padding: $padding;
 
          &:hover {
             transform: translateY(-.2rem) scale(1.1);
@@ -38,6 +49,12 @@ body {
 
          a {
             color: colorByTheme($active-theme, color-white);
+         }
+
+         &.bordered{
+            border: .2rem solid colorByTheme($active-theme, color-white);
+            border-radius: $border-radius;
+            font-weight: bold;
          }
       }
    }
@@ -47,20 +64,6 @@ body {
       box-shadow: 0 .5rem 2rem colorByTheme($active-theme, color-black);
    }
 }
-
-@media screen and (max-width:767px){
-    .header {         
-        padding: 1rem;
-    }
-
-    &__logo {
-        img {
-           min-width: 50px;
-        }
-     }
-
- }
-
 
 /*------------------------*\ 
 |      BANNER STYLES       |
@@ -111,12 +114,38 @@ body {
     }
  }
 
-
-
 /*------------------------*\ 
 |    PORTFOLIO STYLES      |
 \*------------------------*/ 
 .portfolio {
+   background-color: colorByTheme($active-theme, color-lightgrey);
+   position: relative;
+   padding-bottom: 4rem;
+
+   &__border {
+      position: absolute;
+      height: 100%;
+      width: 2rem;
+      background-color: colorByTheme($active-theme, color-grey);
+   }
+
+   &__content {
+      padding-left: 2rem;
+      padding-top: 1.5rem;
+   }
+
+   &__heading {
+      @extend %headings;
+   }
+
+}
+
+/*------------------------*\ 
+|    ABOUT STYLES          |
+\*------------------------*/
+
+
+.about {
    background-color: colorByTheme($active-theme, color-lightgrey);
    position: relative;
    padding-bottom: 4rem;
@@ -134,39 +163,10 @@ body {
    }
 
    &__heading {
-      font-size: 5rem;
-      text-transform: uppercase;
-      letter-spacing: .2rem;
-      color: colorByTheme($active-theme, color-darkgrey);
-      padding-bottom: 3rem;
+        @extend %headings;
    }
 
 }
-
-@media screen and (max-width:767px){
-    .portfolio {
- 
-        &__border {
-            display: none;
-        }
-
-        &__content {
-            padding: 0;
-            padding-top: 1.5rem;
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }
-
-        &__heading {
-            font-size: 3rem;
-            padding-bottom: 1.5rem;
-            text-align: center;
-        }
-
-    }
- }
-
-
 
 /*------------------------*\ 
 |      FOOTER STYLES       |
@@ -202,4 +202,68 @@ footer {
          border-radius: 50%;
       }
    }
+}
+
+
+@media screen and (max-width:767px){ 
+    .border--decorator{
+        display:none;
+    }
+
+    .header {         
+        padding: 1rem;
+    }
+
+        &__logo {
+            img {
+            min-width: 50px;
+            }
+    }
+
+    .portfolio {
+ 
+        &__border {
+            display: none;
+        }
+
+        &__content {
+            padding: 0;
+            padding-top: 1.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    .about {
+ 
+        &__border {
+            display: none;
+        }
+
+        &__content {
+            padding: 0;
+            padding-top: 1.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        &__heading {
+            font-size: 3rem;
+            padding-bottom: 1.5rem;
+            text-align: center;
+        }
+
+    }
+}
+
+
+@media screen and (max-width:480px){ 
+    .header{ 
+        ul {
+            li{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
 }

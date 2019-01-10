@@ -1,9 +1,26 @@
 /*-----------------*\
-|     Variables     |
-\*-----------------*/
-/*-----------------*\
 |     Functions     |
 \*-----------------*/
+/*-----------------*\
+|     Variables     |
+\*-----------------*/
+.portfolio__heading, .about__heading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  color: #4d4d4d;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__heading, .about__heading {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+
 /*-----------------*\
 |     Utilities     |
 \*-----------------*/
@@ -24,6 +41,16 @@
 \*------------------------*/
 body {
   font-family: "Raleway", Geneva, Tahoma, sans-serif;
+}
+
+.border--decorator {
+  background-color: #737373;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  border-radius: 100%;
+  top: 3rem;
+  left: 0.2rem;
 }
 
 /*------------------------*\ 
@@ -53,6 +80,7 @@ body {
   margin: 0 1rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  padding: 1rem;
 }
 
 .header ul li:hover {
@@ -64,19 +92,16 @@ body {
   color: white;
 }
 
+.header ul li.bordered {
+  border: 0.2rem solid white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
 .header.colored {
   background-color: rgba(102, 46, 28, 0.9);
   -webkit-box-shadow: 0 0.5rem 2rem black;
           box-shadow: 0 0.5rem 2rem black;
-}
-
-@media screen and (max-width: 767px) {
-  .header {
-    padding: 1rem;
-  }
-  __logo img {
-    min-width: 50px;
-  }
 }
 
 /*------------------------*\ 
@@ -142,33 +167,29 @@ body {
 }
 
 .portfolio__content {
-  padding-left: 3rem;
+  padding-left: 2rem;
   padding-top: 1.5rem;
 }
 
-.portfolio__heading {
-  font-size: 5rem;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-  color: #4d4d4d;
-  padding-bottom: 3rem;
+/*------------------------*\ 
+|    ABOUT STYLES          |
+\*------------------------*/
+.about {
+  background-color: #bfbfbf;
+  position: relative;
+  padding-bottom: 4rem;
 }
 
-@media screen and (max-width: 767px) {
-  .portfolio__border {
-    display: none;
-  }
-  .portfolio__content {
-    padding: 0;
-    padding-top: 1.5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .portfolio__heading {
-    font-size: 3rem;
-    padding-bottom: 1.5rem;
-    text-align: center;
-  }
+.about__border {
+  position: absolute;
+  height: 100%;
+  width: 2rem;
+  background-color: #737373;
+}
+
+.about__content {
+  padding-left: 3rem;
+  padding-top: 1.5rem;
 }
 
 /*------------------------*\ 
@@ -213,6 +234,47 @@ footer figure img {
   border-radius: 50%;
 }
 
+@media screen and (max-width: 767px) {
+  .border--decorator {
+    display: none;
+  }
+  .header {
+    padding: 1rem;
+  }
+  __logo img {
+    min-width: 50px;
+  }
+  .portfolio__border {
+    display: none;
+  }
+  .portfolio__content {
+    padding: 0;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .about__border {
+    display: none;
+  }
+  .about__content {
+    padding: 0;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .about__heading {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header ul li {
+    font-size: 1.2rem;
+  }
+}
+
 /*------------------------*\ 
 |    PORTFOLIO STYLES      |
 \*------------------------*/
@@ -220,10 +282,10 @@ footer figure img {
   background: #dbd9d9;
   width: 92%;
   margin: 0 auto;
-  padding: 2rem 1rem 2rem 3.5rem;
+  padding: 2rem;
   border-radius: 2px;
-  -webkit-box-shadow: 0 0.3rem 1rem black;
-          box-shadow: 0 0.3rem 1rem black;
+  -webkit-box-shadow: 0 0rem 0.2rem black;
+          box-shadow: 0 0rem 0.2rem black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,6 +300,8 @@ footer figure img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 48%;
+  margin: 1%;
 }
 
 .portfolio__card__title {
@@ -287,10 +351,12 @@ footer figure img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 48%;
+  margin: 1%;
 }
 
 .portfolio__card__image {
-  width: 90%;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -305,11 +371,20 @@ footer figure img {
             flex-direction: column;
   }
   .portfolio__card__info {
+    width: 100%;
     font-size: 1.2rem;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    margin: 0;
     margin-bottom: 1rem;
+  }
+  .portfolio__card__figure {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    margin: 0%;
   }
   .portfolio__card__image {
     width: 100%;
@@ -355,7 +430,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #3e3e3e;
+  background: #3e3e3e80;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -8,9 +8,9 @@
        background: colorByTheme($active-theme, color-lightgrey2);
        width: 92%;
        margin: 0 auto;
-       padding: 2rem 1rem 2rem 3.5rem;
+       padding: $padding*2;
        border-radius: 2px;
-       box-shadow: 0 .3rem 1rem colorByTheme($active-theme, color-black);
+       box-shadow: 0 0rem 0.2rem colorByTheme($active-theme, color-black);
        display: flex;
  
        &:not(:last-child) {
@@ -20,6 +20,8 @@
        &__info {
           font-size: $basefontsize;
           flex: 1;
+          width: 48%;
+          margin: 1%;
        }
  
        &__title {
@@ -66,10 +68,12 @@
  
        &__figure {
           flex: 1;
+          width: 48%;
+          margin: 1%;
        }
  
        &__image {
-          width: 90%;
+          width: 100%;
           display: block;
           margin: 0 auto;
        }
@@ -89,10 +93,18 @@
             flex-direction: column;
 
             &__info {
+                width: 100%;
                 font-size: 1.2rem;
                 flex: 1;
+                margin: 0;
                 margin-bottom: $margin;
             }
+
+            &__figure {
+                flex: 1;
+                width: 100% ;
+                margin: 0%;
+             }
             
             &__image {
                 width: 100%;
