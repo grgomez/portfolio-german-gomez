@@ -65,6 +65,14 @@ $transition-default: all .5s;
 $basefontfamily: ('Raleway', Geneva, Tahoma, sans-serif);
 $basefontsize: 1.6rem;
 
+//      Wrappers
+
+%section-wrapper{
+   background-color: colorByTheme($active-theme, color-lightgrey);
+   position: relative;
+   padding-bottom: $padding * 4;
+}
+
 //      Headings
 
 %headings{

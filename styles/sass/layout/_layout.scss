@@ -6,14 +6,38 @@ body {
    font-family: $basefontfamily;
 }
 
-.border-decorator{
-   background-color: colorByTheme($active-theme, color-grey);
-   width: 3rem;
-   height: 3rem;
-   position: absolute;
-   border-radius: 100%;
-   top: 3rem;
-   left: 0.2rem;
+
+.section{
+
+   &__border {
+      position: absolute;
+      height: 100%;
+      width: 2rem;
+      background-color: colorByTheme($active-theme, color-grey);
+   
+      &__decorator{
+         background-color: colorByTheme($active-theme, color-grey);
+         width: 3rem;
+         height: 3rem;
+         position: absolute;
+         border-radius: 100%;
+         top: 3rem;
+         left: 0.2rem;
+      }
+   }
+   
+   &__content {
+      padding-left: 3rem;
+      padding-right: 1rem;
+      padding-top: 1.5rem;
+      box-sizing: border-box;
+  
+      &__heading {
+         @extend %headings;
+      }
+  
+   }
+
 }
 
 /*------------------------*\ 
@@ -97,172 +121,18 @@ body {
    }
 }
 
-@media screen and (max-width:767px){
-   .banner {         
-      &__info {
-
-         width: 80%;
-      }
-
-      &__name {
-         font-size: 10rem;
-      }
-      
-      &__description {
-         font-size: 1.5rem;
-      }
-   }
-}
-
 /*------------------------*\ 
 |    PORTFOLIO STYLES      |
 \*------------------------*/ 
 .portfolio {
-   background-color: colorByTheme($active-theme, color-lightgrey);
-   position: relative;
-   padding-bottom: 4rem;
-
-   &__border {
-      position: absolute;
-      height: 100%;
-      width: 2rem;
-      background-color: colorByTheme($active-theme, color-grey);
-   }
-
-   &__content {
-      padding-left: 2rem;
-      padding-top: 1.5rem;
-   }
-
-   &__heading {
-      @extend %headings;
-   }
-
+   @extend %section-wrapper;
 }
 
 /*------------------------*\ 
 |       ABOUT STYLES       |
 \*------------------------*/
 .about {
-   background-color: colorByTheme($active-theme, color-lightgrey);
-   position: relative;
-   padding-bottom: $padding * 8;
-
-   &__border {
-      position: absolute;
-      height: 100%;
-      width: 2rem;
-      background-color: colorByTheme($active-theme, color-grey);
-   }
-
-   &__content {
-      padding-left: 3rem;
-      padding-top: 1.5rem;
-   }
-
-   &__heading {
-      @extend %headings;
-   }
-
-   &__info {
-      display: flex;
-   }
-
-   
-   &__image-box {
-      flex: 1;
-      position: relative;
-   }
-   
-   &__name-box {
-      position: absolute;
-      left: 30%;
-      transform: translateX(-50%);
-      z-index: 1;
-      background-color: rgba(colorByTheme($active-theme, color-black), .7);
-      top: 1.5rem;
-      padding: ($padding / 2) ($padding * 2);
-      border-radius: 2px;
-   }
-   
-   &__firstname, &__lastname {
-      font-size: 7rem;
-      text-transform: uppercase;
-      color: rgba(colorByTheme($active-theme, color-secondary), .5);
-   }
-   
-   &__firstname {
-      font-weight: 300;
-   }
-   
-   &__lastname {
-      font-weight: 500;
-   }
-   
-   &__name-line {
-      position: absolute;
-      top: 25%;
-      left: 60%;
-      display: block;
-      width: 35%;
-      height: .1rem;
-      background-color: rgba(colorByTheme($active-theme, color-secondary), .5);
-   }
-   
-   &__image {
-      width: 70%;
-      display: block;
-      margin: 0 auto;
-      filter: opacity(.8) grayscale(60%);
-   }
-   
-   &__description {
-      flex: 1;
-      font-size: $basefontsize;
-      text-align: justify;
-
-      &-title {
-         width: 90%;
-         font-size: 5rem;
-         text-transform: uppercase;
-         font-weight: 600;
-         color: rgba(colorByTheme($active-theme, color-primary), .5);
-      }
-
-      &-subtitle {
-         padding-top: $padding;
-         padding-bottom: $padding * 3;
-         width: 90%;
-         font-size: 1.8rem;
-         font-weight: 400;
-         color: rgba(colorByTheme($active-theme, color-primary), .8);
-      }
-
-      &-contentbox {
-         position: relative;
-         padding-right: $padding * 7;
-      }
-
-      &-content {
-         width: 70%;
-         float: right;
-      }
-
-      &-bar {
-         position: absolute;
-         top: .6rem;
-         height: .3rem;
-         width: 25%;
-         background-color: rgba(colorByTheme($active-theme, color-primary), .5);
-      }
-   }
-
-
-
-   &__skills {
-      
-   }
-   
+   @extend %section-wrapper;
 }
 
 /*------------------------*\ 
@@ -303,9 +173,39 @@ footer {
 
 
 @media screen and (max-width:767px){ 
-    .border--decorator{
-        display:none;
-    }
+
+   .section{
+
+      &__border {
+         display:none;
+      
+         &__decorator{
+            display:none;
+         }
+      
+      } 
+
+      &__content {
+         padding: 0;
+         padding-top: 1.5rem;
+         margin-left: 1rem;
+         margin-right: 1rem;
+      }
+   }
+
+   .banner {         
+      &__info {
+         width: 80%;
+      }
+
+      &__name {
+         font-size: 10rem;
+      }
+      
+      &__description {
+         font-size: 1.5rem;
+      }
+   }
 
     .header {         
         padding: 1rem;
@@ -355,6 +255,8 @@ footer {
 
 
 @media screen and (max-width:480px){ 
+
+   
     .header{ 
         ul {
             li{
@@ -362,5 +264,19 @@ footer {
             }
         }
     }
+
+    .banner {         
+      &__info {
+         width: 80%;
+      }
+
+      &__name {
+         font-size: 6rem;
+      }
+      
+      &__description {
+         font-size: 1.5rem;
+      }
+   }
 
 }

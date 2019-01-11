@@ -4,7 +4,13 @@
 /*-----------------*\
 |     Variables     |
 \*-----------------*/
-.portfolio__heading, .about__heading {
+.portfolio, .about {
+  background-color: #bfbfbf;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.section__content__heading {
   font-size: 5rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
@@ -14,7 +20,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .portfolio__heading, .about__heading {
+  .section__content__heading {
     font-size: 3rem;
     padding-bottom: 1.5rem;
     text-align: center;
@@ -43,7 +49,14 @@ body {
   font-family: "Raleway", Geneva, Tahoma, sans-serif;
 }
 
-.border-decorator {
+.section__border {
+  position: absolute;
+  height: 100%;
+  width: 2rem;
+  background-color: #737373;
+}
+
+.section__border__decorator {
   background-color: #737373;
   width: 3rem;
   height: 3rem;
@@ -51,6 +64,14 @@ body {
   border-radius: 100%;
   top: 3rem;
   left: 0.2rem;
+}
+
+.section__content {
+  padding-left: 3rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*------------------------*\ 
@@ -138,160 +159,12 @@ body {
   font-size: 3rem;
 }
 
-@media screen and (max-width: 767px) {
-  .banner__info {
-    width: 80%;
-  }
-  .banner__name {
-    font-size: 10rem;
-  }
-  .banner__description {
-    font-size: 1.5rem;
-  }
-}
-
 /*------------------------*\ 
 |    PORTFOLIO STYLES      |
 \*------------------------*/
-.portfolio {
-  background-color: #bfbfbf;
-  position: relative;
-  padding-bottom: 4rem;
-}
-
-.portfolio__border {
-  position: absolute;
-  height: 100%;
-  width: 2rem;
-  background-color: #737373;
-}
-
-.portfolio__content {
-  padding-left: 2rem;
-  padding-top: 1.5rem;
-}
-
 /*------------------------*\ 
 |       ABOUT STYLES       |
 \*------------------------*/
-.about {
-  background-color: #bfbfbf;
-  position: relative;
-  padding-bottom: 8rem;
-}
-
-.about__border {
-  position: absolute;
-  height: 100%;
-  width: 2rem;
-  background-color: #737373;
-}
-
-.about__content {
-  padding-left: 3rem;
-  padding-top: 1.5rem;
-}
-
-.about__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.about__image-box {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  position: relative;
-}
-
-.about__name-box {
-  position: absolute;
-  left: 30%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
-  top: 1.5rem;
-  padding: 0.5rem 2rem;
-  border-radius: 2px;
-}
-
-.about__firstname, .about__lastname {
-  font-size: 7rem;
-  text-transform: uppercase;
-  color: rgba(201, 166, 107, 0.5);
-}
-
-.about__firstname {
-  font-weight: 300;
-}
-
-.about__lastname {
-  font-weight: 500;
-}
-
-.about__name-line {
-  position: absolute;
-  top: 25%;
-  left: 60%;
-  display: block;
-  width: 35%;
-  height: .1rem;
-  background-color: rgba(201, 166, 107, 0.5);
-}
-
-.about__image {
-  width: 70%;
-  display: block;
-  margin: 0 auto;
-  -webkit-filter: opacity(0.8) grayscale(60%);
-          filter: opacity(0.8) grayscale(60%);
-}
-
-.about__description {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-size: 1.6rem;
-  text-align: justify;
-}
-
-.about__description-title {
-  width: 90%;
-  font-size: 5rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: rgba(102, 46, 28, 0.5);
-}
-
-.about__description-subtitle {
-  padding-top: 1rem;
-  padding-bottom: 3rem;
-  width: 90%;
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: rgba(102, 46, 28, 0.8);
-}
-
-.about__description-contentbox {
-  position: relative;
-  padding-right: 7rem;
-}
-
-.about__description-content {
-  width: 70%;
-  float: right;
-}
-
-.about__description-bar {
-  position: absolute;
-  top: .6rem;
-  height: .3rem;
-  width: 25%;
-  background-color: rgba(102, 46, 28, 0.5);
-}
-
 /*------------------------*\ 
 |      FOOTER STYLES       |
 \*------------------------*/
@@ -335,8 +208,26 @@ footer figure img {
 }
 
 @media screen and (max-width: 767px) {
-  .border--decorator {
+  .section__border {
     display: none;
+  }
+  .section__border__decorator {
+    display: none;
+  }
+  .section__content {
+    padding: 0;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .banner__info {
+    width: 80%;
+  }
+  .banner__name {
+    font-size: 10rem;
+  }
+  .banner__description {
+    font-size: 1.5rem;
   }
   .header {
     padding: 1rem;
@@ -373,6 +264,15 @@ footer figure img {
   .header ul li {
     font-size: 1.2rem;
   }
+  .banner__info {
+    width: 80%;
+  }
+  .banner__name {
+    font-size: 6rem;
+  }
+  .banner__description {
+    font-size: 1.5rem;
+  }
 }
 
 /*------------------------*\ 
@@ -380,7 +280,7 @@ footer figure img {
 \*------------------------*/
 .portfolio__card {
   background: #dbd9d9;
-  width: 92%;
+  width: 98%;
   margin: 0 auto;
   padding: 2rem;
   border-radius: 2px;
@@ -497,6 +397,182 @@ footer figure img {
   }
   .portfolio__card__tech {
     text-align: center;
+  }
+}
+
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+.about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__image-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.about__name-box {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 2rem;
+  border-radius: 2px;
+}
+
+.about__subtitle-responsive {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 2rem;
+  border-radius: 2px;
+}
+
+.about__subtitle-responsive__text {
+  font-weight: 500;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: rgba(201, 166, 107, 0.5);
+}
+
+.about__firstname, .about__lastname {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: rgba(201, 166, 107, 0.5);
+}
+
+.about__firstname {
+  font-weight: 300;
+}
+
+.about__lastname {
+  font-weight: 500;
+}
+
+.about__name-line {
+  position: absolute;
+  top: 25%;
+  left: 60%;
+  display: block;
+  width: 35%;
+  height: .1rem;
+  background-color: rgba(201, 166, 107, 0.5);
+}
+
+.about__image {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  -webkit-filter: opacity(0.8) grayscale(60%);
+          filter: opacity(0.8) grayscale(60%);
+}
+
+.about__description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.about__description-title {
+  width: 90%;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(102, 46, 28, 0.5);
+}
+
+.about__description-subtitle {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  width: 90%;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: rgba(102, 46, 28, 0.8);
+}
+
+.about__description-contentbox {
+  position: relative;
+  padding-right: 7rem;
+}
+
+.about__description-content {
+  width: 70%;
+  float: right;
+}
+
+.about__description-bar {
+  position: absolute;
+  top: .6rem;
+  height: .3rem;
+  width: 25%;
+  background-color: rgba(102, 46, 28, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+  .about__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__firstname, .about__lastname {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: rgba(201, 166, 107, 0.5);
+  }
+  .about__description {
+    font-size: 1.4rem;
+  }
+  .about__description-title {
+    display: none;
+  }
+  .about__description-subtitle {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: rgba(102, 46, 28, 0.5) solid 2px;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .about__description-bar {
+    display: none;
+  }
+  .about__description-contentbox {
+    padding-right: initial;
+  }
+  .about__description-content {
+    width: 90%;
+    float: initial;
+    margin: 0 auto;
+  }
+  .about__image {
+    width: 50%;
+  }
+  .about__subtitle-responsive {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about__firstname, .about__lastname {
+    font-size: 1.5rem;
+  }
+  .about__subtitle-responsive__text {
+    font-size: 1.5rem;
+    display: block;
+  }
+  .about__description-subtitle {
+    font-size: 1.3rem;
   }
 }
 
