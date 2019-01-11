@@ -120,6 +120,14 @@
     
  }
 
+ @media screen and (max-width: 1024px){
+    .about {
+        &__firstname, &__lastname {
+            font-size: 4rem;
+        }
+    }
+}
+
  @media screen and (max-width: 767px){
     .about {
         &__info {
@@ -128,8 +136,6 @@
 
         &__firstname, &__lastname {
             font-size: 4rem;
-            text-transform: uppercase;
-            color: rgba(colorByTheme($active-theme, color-secondary), .5);
         }
 
         &__description{ 

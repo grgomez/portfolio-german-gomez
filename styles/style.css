@@ -519,6 +519,12 @@ footer figure img {
   background-color: rgba(102, 46, 28, 0.5);
 }
 
+@media screen and (max-width: 1024px) {
+  .about__firstname, .about__lastname {
+    font-size: 4rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .about__info {
     -webkit-box-orient: vertical;
@@ -528,8 +534,6 @@ footer figure img {
   }
   .about__firstname, .about__lastname {
     font-size: 4rem;
-    text-transform: uppercase;
-    color: rgba(201, 166, 107, 0.5);
   }
   .about__description {
     font-size: 1.4rem;
