@@ -136,6 +136,23 @@
         &__firstname, &__lastname {
             font-size: 4rem;
         }
+
+        &__description{
+
+            &-bar {
+                  display: none;
+                  }
+
+            &-contentbox{
+                  padding-right: initial;
+            }
+
+            &-content {
+                  width: 90%;
+                  float: left;;
+                  margin: 0 auto;
+            }
+      }
     }
 }
 
@@ -165,19 +182,10 @@
                margin-bottom: 1rem;
          }
 
-         &-bar {
-               display: none;
-         }
-
-         &-contentbox{
-               padding-right: initial;
-         }
-
          &-content {
-               width: 90%;
-               float: initial;
-               margin: 0 auto;
-         }
+            float: initial;
+            }
+
       }
 
       &__image{

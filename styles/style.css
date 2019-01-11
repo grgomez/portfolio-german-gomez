@@ -4,7 +4,7 @@
 /*-----------------*\
 |     Variables     |
 \*-----------------*/
-.portfolio, .about {
+.portfolio, .about, .skills, .contact {
   background-color: #bfbfbf;
   position: relative;
   padding-bottom: 4rem;
@@ -161,6 +161,12 @@ body {
 
 /*------------------------*\ 
 |    PORTFOLIO STYLES      |
+\*------------------------*/
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+/*------------------------*\ 
+|       ABOUT STYLES       |
 \*------------------------*/
 /*------------------------*\ 
 |       ABOUT STYLES       |
@@ -540,6 +546,17 @@ footer figure img {
   .about__firstname, .about__lastname {
     font-size: 4rem;
   }
+  .about__description-bar {
+    display: none;
+  }
+  .about__description-contentbox {
+    padding-right: initial;
+  }
+  .about__description-content {
+    width: 90%;
+    float: left;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -565,16 +582,8 @@ footer figure img {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
   }
-  .about__description-bar {
-    display: none;
-  }
-  .about__description-contentbox {
-    padding-right: initial;
-  }
   .about__description-content {
-    width: 90%;
     float: initial;
-    margin: 0 auto;
   }
   .about__image {
     width: 50%;
@@ -595,6 +604,15 @@ footer figure img {
   .about__description-subtitle {
     font-size: 1.3rem;
   }
+}
+
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+.skills__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*------------------------*\ 
@@ -1189,6 +1207,145 @@ footer figure img {
 .progress-circle.p100 .value-bar {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+/*------------------------*\ 
+|     SKILLS BAR STYLES    |
+\*------------------------*/
+.skills__skills--bars {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skills__skill-bar {
+  background: #737373;
+  position: relative;
+  width: 100%;
+  max-width: 100px;
+  height: 100%;
+  max-height: 20rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.skills__skill-bar__title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #737373;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 900;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 1;
+}
+
+.skills__skill-bar__nivel {
+  background: #737373;
+  position: relative;
+  background: #bfbfbf;
+  bottom: -4px;
+  width: inherit !important;
+  height: calc( 18rem - 4px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.skills__skill-bar__nivel__fill {
+  position: absolute;
+  height: 10%;
+  background-color: #c9a66b;
+  border-left: 0.5rem solid #bb9046;
+  width: 80%;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.skills__skill-bar__nivel__value {
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: calc( 50% - 2rem);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 4rem;
+  z-index: 1;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 767px) {
+  .skills__info {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .skills__skills--bars {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skills__skill-bar {
+    margin: initial;
+    margin-bottom: 1rem;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    max-height: 50px;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 3px solid black;
+  }
+  .skills__skill-bar__title {
+    position: relative;
+    width: 30%;
+  }
+  .skills__skill-bar__nivel {
+    position: relative;
+    bottom: initial;
+    height: auto;
+  }
+  .skills__skill-bar__nivel__fill {
+    height: 100% !important;
+    border: 0;
+    width: 0%;
+    margin: initial;
+  }
+  .skills__skill-bar__nivel__value {
+    top: calc( 50% - 1.5rem);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .skills__skill-bar:nth-last-child(1) {
+    margin-bottom: 0;
+  }
 }
 
 /* Reset Default */

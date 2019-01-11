@@ -136,6 +136,20 @@ body {
 }
 
 /*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+.skills {
+   @extend %section-wrapper;
+}
+
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+.contact {
+   @extend %section-wrapper;
+}
+
+/*------------------------*\ 
 |      FOOTER STYLES       |
 \*------------------------*/ 
 footer {

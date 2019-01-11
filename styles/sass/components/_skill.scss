@@ -1,6 +1,16 @@
 /*------------------------*\ 
-|      SKILLS STYLES       |
+|       ABOUT STYLES       |
 \*------------------------*/ 
+.skills {
+    &__info {
+       display: flex;
+    }
+}
+
+/*------------------------*\ 
+|      SKILLS STYLES       |
+\*------------------------*/
+
 .progress-circle {
    font-size: 20px;
    margin: 20px;
@@ -175,3 +185,145 @@
 .progress-circle.p98 .value-bar { transform: rotate(353deg); }
 .progress-circle.p99 .value-bar { transform: rotate(356deg); }
 .progress-circle.p100 .value-bar { transform: rotate(360deg); }
+
+/*------------------------*\ 
+|     SKILLS BAR STYLES    |
+\*------------------------*/
+
+.skills{
+
+    &__skills--bars{
+        justify-content: center;
+        margin-top: 1rem;
+        padding: 2rem;
+        background-color: rgba(colorByTheme($active-theme, color-black), .7);
+        flex: 1;
+        display: flex;
+    }
+    
+    &__skill-bar{
+        background: colorByTheme($active-theme, color-grey);
+        position: relative;
+        width: 100%;
+        max-width: 100px;
+        height: 100%;
+        max-height: 20rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        // border: solid 2px rgba(colorByTheme($active-theme, color-black), .7);
+        box-sizing: border-box;
+
+        &__title{
+            align-items: center;
+            background: colorByTheme($active-theme, color-grey);
+            bottom:0;
+            color: rgba(colorByTheme($active-theme, color-black), .7);
+            position: absolute;
+            font-size: 1.2rem;
+            font-weight: 900;
+            height: auto;
+            justify-content: center;
+            padding-top: $padding * .7;
+            padding-bottom: $padding * .7;
+            text-align: center;
+            display: flex;
+            text-transform: uppercase;
+            width: 100%;
+            z-index: 1;
+        }
+        
+        &__nivel{
+            background: colorByTheme($active-theme, color-grey);
+            position: relative;
+            background: #bfbfbf;
+            bottom: -4px;
+            width: inherit!important;
+            height: calc( 18rem - 4px);
+            box-sizing: border-box;
+            
+            &__fill{
+                position: absolute;
+                height: 10%;
+                background-color: colorByTheme($active-theme, color-secondary);
+                border-left: .5rem solid colorByTheme($active-theme, color-secondary-dark);
+                width: 80%;
+                margin: 0px auto;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            &__value{
+                color: rgba(colorByTheme($active-theme, color-black), .7);
+                // text-shadow: -2px 2px 5px rgba(colorByTheme($active-theme, color-black), .7);
+                position: absolute;
+                top: calc( 50% - 2rem);
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-size: 4rem;
+                z-index: 1;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px){
+
+}
+
+@media screen and (max-width:767px){
+
+    .skills{
+        &__info{
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        &__skills--bars{
+            flex-direction: column;
+        }
+
+        &__skill-bar{
+            margin:initial;
+            margin-bottom: 1rem;
+            display: inline-flex;
+            max-height: 50px;
+            width: 100%;
+            max-width: 100%;
+            border-bottom: 3px solid colorByTheme($active-theme, color-black);;
+
+            &__title{
+                position: relative;
+                width: 30%;
+            }
+
+            &__nivel{
+                position: relative;
+                bottom:initial;
+                height: auto;
+
+                &__fill{
+                    height: 100%!important;
+                    border:0;
+                    width: 0%;
+                    margin: initial;
+                }
+
+                &__value{
+                    top: calc( 50% - 1.5rem);
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+
+            }
+        }
+
+        &__skill-bar:nth-last-child(1){
+            margin-bottom: 0;
+        }
+    }
+
+}
