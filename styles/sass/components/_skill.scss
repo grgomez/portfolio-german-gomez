@@ -4,6 +4,7 @@
 .skills {
     &__info {
        display: flex;
+       height: 60vh;
     }
 }
 
@@ -199,6 +200,7 @@
         background-color: rgba(colorByTheme($active-theme, color-black), .7);
         flex: 1;
         display: flex;
+        
     }
     
     &__skill-bar{
@@ -207,7 +209,8 @@
         width: 100%;
         max-width: 100px;
         height: 100%;
-        max-height: 20rem;
+        // max-height: 20rem;
+        max-height: calc( 60vh - 4rem );
         margin-left: 2rem;
         margin-right: 2rem;
         // border: solid 2px rgba(colorByTheme($active-theme, color-black), .7);
@@ -236,9 +239,10 @@
             background: colorByTheme($active-theme, color-grey);
             position: relative;
             background: #bfbfbf;
-            bottom: -4px;
+            bottom: 0;
             width: inherit!important;
-            height: calc( 18rem - 4px);
+            // height: calc( 18rem - 4px);
+            height: calc( 60vh - 4rem );
             box-sizing: border-box;
             
             &__fill{
