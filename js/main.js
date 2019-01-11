@@ -1,3 +1,4 @@
+// NAVBAR COLOR
 const header = document.querySelector('.header');
 
 window.onscroll = function () { 
