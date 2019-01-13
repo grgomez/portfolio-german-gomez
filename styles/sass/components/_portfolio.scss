@@ -3,14 +3,22 @@
 \*------------------------*/ 
 .portfolio {
 
+   &__grid{
+      display:grid;
+      grid-template-columns: repeat( 2 , 1fr);
+   }
+
+
    &__card {
-      background: colorByTheme($active-theme, color-ligthergrey);
+      // background: invert(colorByTheme($active-theme, color-primary), 100%);;
+      background: map-get($greyscale , color-ligthergrey);
       width: 98%;
       margin: 0 auto;
       padding: $padding*2;
       border-radius: 2px;
-      box-shadow: 0 .2rem 1rem colorByTheme($active-theme, color-black);
-      display: flex;
+      box-shadow: 0 .2rem 1rem map-get($greyscale , color-black);
+      display: grid;
+
 
       &:not(:last-child) {
          margin-bottom: 3rem;
@@ -19,8 +27,9 @@
       &__info {
          font-size: $basefontsize;
          flex: 1;
-         width: 48%;
-         margin: 1%;
+         padding-bottom: $padding;
+         // width: 48%;
+         // margin: 1%;
       }
 
       &__title {
@@ -28,7 +37,7 @@
          font-weight: 900;
          text-transform: uppercase;
          color: colorByTheme($active-theme, color-secondary);
-         text-shadow: .1rem .1rem .1rem colorByTheme($active-theme, color-black);
+         text-shadow: .1rem .1rem .1rem map-get($greyscale , color-black);
          padding-bottom: .6rem;
       }
 
@@ -36,10 +45,10 @@
          font-size: inherit;
          font-weight: 400;
          text-transform: uppercase;
-         color: colorByTheme($active-theme, color-grey);
+         color: map-get($greyscale , color-grey);
          margin-bottom: 2rem;
          padding-bottom: .5rem;
-         border-bottom: 1px solid colorByTheme($active-theme, color-grey);
+         border-bottom: 1px solid map-get($greyscale , color-grey);
       }
 
       &__date {
@@ -56,7 +65,7 @@
             transition: all .3s;
 
             &:hover {
-               background: colorByTheme($active-theme, color-lightgrey);
+               background: map-get($greyscale , color-lightgrey);
             }
          }
       }
@@ -67,20 +76,37 @@
 
       &__figure {
          flex: 1;
-         width: 48%;
-         margin: 1%;
+         // width: 48%;
+         // margin: 1%;
       }
 
       &__image {
          width: 100%;
          display: block;
          margin: 0 auto;
+         object-fit: contain;
       }
    }
 }
 
 @media screen and (max-width:1024px){
-   
+   .portfolio {   
+
+      &__grid{
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      &__info {
+         width: 48%;
+         margin: 1%;
+         padding-bottom: initial;
+      }
+      &__figure {
+         width: 48%;
+         margin: 1%;
+      }
+   }
 }
 
 @media screen and (max-width:767px){
@@ -109,6 +135,8 @@
             width: 100%;
             display: block;
             margin: 0 auto;
+            max-height: 150px;
+            object-fit: cover;
          }
 
          &__title {

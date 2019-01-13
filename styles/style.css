@@ -120,9 +120,9 @@ body {
 }
 
 .header.colored {
-  background-color: rgba(102, 46, 28, 0.9);
-  -webkit-box-shadow: 0 0.5rem 2rem black;
-          box-shadow: 0 0.5rem 2rem black;
+  background-color: rgba(77, 77, 77, 0.95);
+  -webkit-box-shadow: 0 0.5rem 2rem;
+          box-shadow: 0 0.5rem 2rem;
 }
 
 /*------------------------*\ 
@@ -132,8 +132,8 @@ body {
   margin: 0;
   padding: 0;
   border-radius: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(102, 46, 28, 0.4)), to(rgba(102, 46, 28, 0.2))), url("../images/default-fondo.jpeg");
-  background-image: linear-gradient(rgba(102, 46, 28, 0.4) 0%, rgba(102, 46, 28, 0.2)), url("../images/default-fondo.jpeg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 77, 77, 0.4)), to(rgba(77, 77, 77, 0.2))), url("../images/default-fondo.jpeg");
+  background-image: linear-gradient(rgba(77, 77, 77, 0.4) 0%, rgba(77, 77, 77, 0.2)), url("../images/default-fondo.jpeg");
   height: 100vh;
   position: relative;
   -webkit-box-shadow: none;
@@ -269,7 +269,12 @@ footer figure img {
   footer {
     margin-bottom: initial;
   }
+  footer span {
+    text-align: center;
+    width: 100%;
+  }
   footer figure {
+    display: none;
     position: absolute;
     left: auto;
     right: 10px;
@@ -301,6 +306,13 @@ footer figure img {
 /*------------------------*\ 
 |    PORTFOLIO STYLES      |
 \*------------------------*/
+.portfolio__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
 .portfolio__card {
   background: #dbd9d9;
   width: 98%;
@@ -309,9 +321,8 @@ footer figure img {
   border-radius: 2px;
   -webkit-box-shadow: 0 0.2rem 1rem black;
           box-shadow: 0 0.2rem 1rem black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
 }
 
 .portfolio__card:not(:last-child) {
@@ -323,8 +334,7 @@ footer figure img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  width: 48%;
-  margin: 1%;
+  padding-bottom: 1rem;
 }
 
 .portfolio__card__title {
@@ -374,14 +384,33 @@ footer figure img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  width: 48%;
-  margin: 1%;
 }
 
 .portfolio__card__image {
   width: 100%;
   display: block;
   margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .portfolio__info {
+    width: 48%;
+    margin: 1%;
+    padding-bottom: initial;
+  }
+  .portfolio__figure {
+    width: 48%;
+    margin: 1%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -413,6 +442,9 @@ footer figure img {
     width: 100%;
     display: block;
     margin: 0 auto;
+    max-height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .portfolio__card__title {
     font-size: 2.5rem;
@@ -444,7 +476,7 @@ footer figure img {
   left: 2rem;
   top: 2rem;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(31, 30, 30, 0.7);
   padding: 0.5rem 2rem;
   border-radius: 2px;
 }
@@ -455,7 +487,7 @@ footer figure img {
   right: 2rem;
   bottom: 2rem;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(31, 30, 30, 0.7);
   padding: 0.5rem 2rem;
   border-radius: 2px;
 }
@@ -512,7 +544,7 @@ footer figure img {
   font-size: 5rem;
   text-transform: uppercase;
   font-weight: 600;
-  color: rgba(102, 46, 28, 0.5);
+  color: rgba(31, 30, 30, 0.7);
 }
 
 .about__description-subtitle {
@@ -521,7 +553,7 @@ footer figure img {
   width: 90%;
   font-size: 1.8rem;
   font-weight: 400;
-  color: rgba(102, 46, 28, 0.8);
+  color: rgba(77, 77, 77, 0.8);
 }
 
 .about__description-contentbox {
@@ -539,7 +571,7 @@ footer figure img {
   top: .6rem;
   height: .3rem;
   width: 25%;
-  background-color: rgba(102, 46, 28, 0.5);
+  background-color: rgba(31, 30, 30, 0.5);
 }
 
 .about__skills {
@@ -595,7 +627,7 @@ footer figure img {
   .about__description-subtitle {
     width: 90%;
     margin: 0 auto;
-    border-bottom: rgba(102, 46, 28, 0.5) solid 2px;
+    border-bottom: rgba(31, 30, 30, 0.5) solid 2px;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
   }
@@ -1236,7 +1268,7 @@ footer figure img {
           justify-content: center;
   margin-top: 1rem;
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(31, 30, 30, 0.7);
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1286,7 +1318,7 @@ footer figure img {
 .skills__skill-bar__nivel {
   background: #737373;
   position: relative;
-  background: #bfbfbf;
+  background: #dbd9d9;
   bottom: 0;
   width: inherit !important;
   height: calc( 60vh - 4rem);
@@ -1374,11 +1406,11 @@ footer figure img {
 }
 
 .contact .section__border {
-  background-color: #8c8c8c;
+  background: #bfbfbf;
 }
 
 .contact .section__border__decorator {
-  background-color: #8c8c8c;
+  background: #bfbfbf;
 }
 
 .contact .section__content {
@@ -1408,10 +1440,14 @@ footer figure img {
 .contact__contact-me h1 {
   font-size: 4rem;
   padding-left: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(31, 30, 30, 0.5);
+  color: #8c8c8c;
 }
 
 .contact__contact-me h2 {
+  background-color: rgba(31, 30, 30, 0.2);
+  color: #8c8c8c;
+  padding-left: .5rem;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -1430,6 +1466,7 @@ footer figure img {
 
 .contact__social-media-box__element {
   font-size: 8rem;
+  color: rgba(31, 30, 30, 0.5);
 }
 
 @media screen and (max-width: 1024px) {
@@ -1441,8 +1478,8 @@ footer figure img {
   }
   .contact__contact-me h1 {
     font-size: 2.5rem;
-    padding-left: initial;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 1rem;
+    background-color: rgba(31, 30, 30, 0.5);
   }
   .contact__contact-me h2 {
     font-size: 1.5rem;

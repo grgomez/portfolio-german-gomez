@@ -34,7 +34,7 @@
    border-radius: 50%;
    width: 4.3em;
    height: 4.3em;
-   background-color: colorByTheme($active-theme, color-lightgrey);
+   background-color: map-get($greyscale , color-lightgrey);
    content: " ";
 }
 /* Text inside the control */
@@ -44,7 +44,7 @@
    width: 5em;
    text-align: center;
    display: block;
-   color: colorByTheme($active-theme, color-darkgrey);
+   color: map-get($greyscale , color-darkgrey);
    z-index: 2;
 }
 .left-half-clipper { 
@@ -197,14 +197,14 @@
         justify-content: center;
         margin-top: 1rem;
         padding: 2rem;
-        background-color: rgba(colorByTheme($active-theme, color-black), .7);
+        background-color: rgba(colorByTheme($active-theme, color-primary-dark), .7);
         flex: 1;
         display: flex;
         
     }
     
     &__skill-bar{
-        background: colorByTheme($active-theme, color-grey);
+        background: map-get($greyscale , color-grey);
         position: relative;
         width: 100%;
         max-width: 100px;
@@ -218,9 +218,9 @@
 
         &__title{
             align-items: center;
-            background: colorByTheme($active-theme, color-grey);
+            background: map-get($greyscale , color-grey);
             bottom:0;
-            color: rgba(colorByTheme($active-theme, color-black), .7);
+            color: rgba(map-get($greyscale , color-black), .7);
             position: absolute;
             font-size: 1.2rem;
             font-weight: 900;
@@ -236,9 +236,10 @@
         }
         
         &__nivel{
-            background: colorByTheme($active-theme, color-grey);
+            background: map-get($greyscale , color-grey);
             position: relative;
-            background: #bfbfbf;
+            // background: invert(colorByTheme($active-theme, color-primary-light), 100%);;
+            background: map-get($greyscale , color-ligthergrey);
             bottom: 0;
             width: inherit!important;
             // height: calc( 18rem - 4px);
@@ -258,7 +259,7 @@
             }
 
             &__value{
-                color: rgba(colorByTheme($active-theme, color-black), .7);
+                color: rgba(map-get($greyscale , color-black), .7);
                 // text-shadow: -2px 2px 5px rgba(colorByTheme($active-theme, color-black), .7);
                 position: absolute;
                 top: calc( 50% - 2rem);
@@ -297,7 +298,7 @@
             max-height: 50px;
             width: 100%;
             max-width: 100%;
-            border-bottom: 3px solid colorByTheme($active-theme, color-black);;
+            border-bottom: 3px solid map-get($greyscale , color-black);
 
             &__title{
                 position: relative;

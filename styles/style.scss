@@ -47,9 +47,9 @@ a{
 }
 
 ::-webkit-scrollbar-thumb {
-   background: colorByTheme($active-theme, color-lightgrey);
+   background: map-get($greyscale , color-lightgrey);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-   background: colorByTheme($active-theme, color-grey); 
+   background: map-get($greyscale , color-grey); 
 }
