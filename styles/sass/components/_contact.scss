@@ -6,20 +6,23 @@
     padding-bottom: initial;
 
     .section__border {
-        background-color: invert(colorByTheme($active-theme, color-grey), 100%);
+        // background-color: invert(colorByTheme($active-theme, color-primary-light), 100%);
+            background: map-get($greyscale , color-lightgrey);
      
         &__decorator{
-           background-color: invert(colorByTheme($active-theme, color-grey), 100%);
+        //    background-color: invert(colorByTheme($active-theme, color-primary-light), 100%);
+            background: map-get($greyscale , color-lightgrey);   
         }
     }
     
     .section__content{
         height: auto;
         padding-bottom: 6rem;
-        background-color: colorByTheme($active-theme, color-grey);
+        background-color: colorByTheme($active-theme, color-primary-light);
         
         &__heading {
-            color: invert(colorByTheme($active-theme, color-grey), 100%);
+            color: invert(colorByTheme($active-theme, color-primary-light), 100%);
+            
         }
     }
 
@@ -35,10 +38,14 @@
         h1{
             font-size: 4rem;
             padding-left: 2rem;
-            background-color:rgba(colorByTheme($active-theme, color-black), .5);
+            background-color:rgba(colorByTheme($active-theme, color-primary-dark), .5);
+            color: invert(colorByTheme($active-theme, color-primary-light), 100%);
         }
-
+        
         h2{
+            background-color:rgba(colorByTheme($active-theme, color-primary-dark), .2);
+            color: invert(colorByTheme($active-theme, color-primary-light), 100%);
+            padding-left: .5rem;
             font-size: 2rem;
             margin-bottom: 1rem;
         }
@@ -51,6 +58,7 @@
 
         &__element{
             font-size: 8rem;
+            color: rgba(colorByTheme($active-theme, color-primary-dark), .5);
         }
 
     }
@@ -67,8 +75,8 @@
     
             h1{
                 font-size: 2.5rem;
-                padding-left: initial;
-                background-color:rgba(colorByTheme($active-theme, color-black), .5);
+                padding-left: 1rem;
+                background-color:rgba(colorByTheme($active-theme, color-primary-dark), .5);
             }
     
             h2{

@@ -13,10 +13,10 @@ body {
       position: absolute;
       height: 100%;
       width: 2rem;
-      background-color: colorByTheme($active-theme, color-grey);
+      background-color: colorByTheme($active-theme, color-primary-light);
    
       &__decorator{
-         background-color: colorByTheme($active-theme, color-grey);
+         background-color: colorByTheme($active-theme, color-primary-light);
          width: 3rem;
          height: 3rem;
          position: absolute;
@@ -74,11 +74,11 @@ body {
          }
 
          a {
-            color: colorByTheme($active-theme, color-white);
+            color: map-get($greyscale , color-white);
          }
 
          &.bordered{
-            border: .2rem solid colorByTheme($active-theme, color-white);
+            border: .2rem solid map-get($greyscale , color-white);
             border-radius: $border-radius;
             font-weight: bold;
          }
@@ -86,7 +86,7 @@ body {
    }
 
    &.colored {
-      background-color: colorByTheme($active-theme, color-primary-transparent);
+      background-color: rgba(colorByTheme($active-theme, color-primary) , .95);
       box-shadow: 0 .5rem 2rem colorByTheme($active-theme, color-black);
    }
 }
@@ -111,7 +111,7 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
-      color: colorByTheme($active-theme, color-lightgrey);
+      color: map-get($greyscale , color-lightgrey);
    }
    
    &__name {
@@ -155,7 +155,7 @@ body {
 |      FOOTER STYLES       |
 \*------------------------*/ 
 footer {
-   background-color: colorByTheme($active-theme,color-darkgrey);
+   background-color: colorByTheme($active-theme,color-primary);
    height: 50px;
    margin-bottom: 50px;
    display: flex;
@@ -167,7 +167,7 @@ footer {
    span {
       font-weight: 400;
       font-size: 1.5rem;
-      color: colorByTheme($active-theme,color-white);
+      color: map-get($greyscale , color-white);
       a {
          font-weight: bold;
       } 
@@ -273,9 +273,14 @@ footer {
 
     footer {
       margin-bottom: initial;
+
+      span{
+         text-align: center;
+         width: 100%;
+      }
       
       figure {
-
+         display: none;
          position: absolute;
          left: auto;
          right: 10px;
