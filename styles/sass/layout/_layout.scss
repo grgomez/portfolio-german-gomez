@@ -21,7 +21,8 @@ body {
          height: 3rem;
          position: absolute;
          border-radius: 100%;
-         top: 3rem;
+         // top: 3rem;
+         top: 9.5rem;
          left: 0.2rem;
       }
    }
@@ -29,7 +30,8 @@ body {
    &__content {
       padding-left: 3rem;
       padding-right: 1rem;
-      padding-top: 1.5rem;
+      // padding-top: 1.5rem;
+      padding-top: 8rem;
       box-sizing: border-box;
   
       &__heading {
@@ -202,6 +204,7 @@ footer {
       &__content {
          padding: 0;
          padding-top: 1.5rem;
+         // padding-top: 8rem;
          margin-left: 1rem;
          margin-right: 1rem;
       }
