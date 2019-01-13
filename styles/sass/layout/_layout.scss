@@ -2,79 +2,298 @@
 |         $LAYOUT          |
 \*------------------------*/ 
 
-body{
-    font-family: $basefontfamily;
+body {
+   font-family: $basefontfamily;
 }
 
-header{
 
-    @extend %flexBetweenCenter;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: colorByTheme($active-theme,color-primary);
-    padding: $padding;
+.section{
+
+   &__border {
+      position: absolute;
+      height: 100%;
+      width: 2rem;
+      background-color: colorByTheme($active-theme, color-grey);
+   
+      &__decorator{
+         background-color: colorByTheme($active-theme, color-grey);
+         width: 3rem;
+         height: 3rem;
+         position: absolute;
+         border-radius: 100%;
+         // top: 3rem;
+         top: 9.5rem;
+         left: 0.2rem;
+      }
+   }
+   
+   &__content {
+      padding-left: 3rem;
+      padding-right: 1rem;
+      // padding-top: 1.5rem;
+      padding-top: 8rem;
+      box-sizing: border-box;
+  
+      &__heading {
+         @extend %headings;
+      }
+  
+   }
+
+}
+
+/*------------------------*\ 
+|      HEADER STYLES       |
+\*------------------------*/ 
+.header {
+   @extend %flexBetweenCenter;
+   width: 100%;
+   box-sizing: border-box;
+   padding: $padding $padding*5;
+   position: fixed;
+   transition: $transition-default;
+   z-index: 100000000;
+   font-size: $basefontsize;
+
+   &__logo {
+      max-width: 5rem;
+
+      img {
+         width: 100%;
+      }
+   }
+
+   ul {
+      li {
+         margin: 0 $margin;
+         transition: $transition-default;
+         padding: $padding;
+
+         &:hover {
+            transform: translateY(-.2rem) scale(1.1);
+         }
+
+         a {
+            color: colorByTheme($active-theme, color-white);
+         }
+
+         &.bordered{
+            border: .2rem solid colorByTheme($active-theme, color-white);
+            border-radius: $border-radius;
+            font-weight: bold;
+         }
+      }
+   }
+
+   &.colored {
+      background-color: colorByTheme($active-theme, color-primary-transparent);
+      box-shadow: 0 .5rem 2rem colorByTheme($active-theme, color-black);
+   }
+}
+
+/*------------------------*\ 
+|      BANNER STYLES       |
+\*------------------------*/ 
+.banner {
+   margin: 0;
+   padding: 0;
+   border-radius: 0;
+   background-image: linear-gradient(rgba(colorByTheme($active-theme, color-primary), 0.4) 0%, rgba(colorByTheme($active-theme, color-primary), 0.2)),
+   url("../images/default-fondo.jpeg");
+   height: 100vh;
+   position: relative;
+   box-shadow: none;
+   text-align: center;
+   
+   &__info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      color: colorByTheme($active-theme, color-lightgrey);
+   }
+   
+   &__name {
+      font-size: 15rem;
+   }
+   
+   &__description {
+      font-size: 3rem;
+   }
+}
+
+/*------------------------*\ 
+|    PORTFOLIO STYLES      |
+\*------------------------*/ 
+.portfolio {
+   @extend %section-wrapper;
+}
+
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+.about {
+   @extend %section-wrapper;
+}
+
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+.skills {
+   @extend %section-wrapper;
+}
+
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+.contact {
+   @extend %section-wrapper;
+}
+
+/*------------------------*\ 
+|      FOOTER STYLES       |
+\*------------------------*/ 
+footer {
+   background-color: colorByTheme($active-theme,color-secondary);
+   height: 50px;
+   margin-bottom: 50px;
+   display: flex;
+   align-items: center;
+   position: relative;
+   box-sizing: border-box;
+   padding: .5em;
+
+   span {
+      font-weight: 400;
+      a {
+         font-weight: bold;
+      } 
+   }
+
+   figure {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      text-align: center;
+      top: 5px;
+
+      img {
+         height: 95px;
+         background-color: white;
+         border-radius: 50%;
+      }
+   }
+}
 
 
-    figure.main-logo{
+@media screen and (max-width:767px){ 
 
-        max-width: 45px;
+   .section{
 
-        img{
-            width: 100%;
+      &__border {
+         display:none;
+      
+         &__decorator{
+            display:none;
+         }
+      
+      } 
+
+      &__content {
+         padding: 0;
+         padding-top: 1.5rem;
+         // padding-top: 8rem;
+         margin-left: 1rem;
+         margin-right: 1rem;
+      }
+   }
+
+   .banner {         
+      &__info {
+         width: 80%;
+      }
+
+      &__name {
+         font-size: 10rem;
+      }
+      
+      &__description {
+         font-size: 1.5rem;
+      }
+   }
+
+    .header {         
+        padding: 1rem;
+    }
+
+        &__logo {
+            img {
+            min-width: 50px;
+            }
+    }
+
+    .portfolio {
+ 
+        &__border {
+            display: none;
+        }
+
+        &__content {
+            padding: 0;
+            padding-top: 1.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
         }
     }
 
-    ul{
-        li {
-            margin-left: 10px;
-            margin-right: 10px;
+    .about {
+ 
+        &__border {
+            display: none;
+        }
 
-            a{
-                color:colorByTheme($active-theme, color-white );
+        &__content {
+            padding: 0;
+            padding-top: 1.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        &__heading {
+            font-size: 3rem;
+            padding-bottom: 1.5rem;
+            text-align: center;
+        }
+
+    }
+}
+
+
+@media screen and (max-width:480px){ 
+
+   
+    .header{ 
+        ul {
+            li{
+                font-size: 1.2rem;
             }
         }
     }
 
-}
+    .banner {         
+      &__info {
+         width: 80%;
+      }
 
-footer{
-    background-color: colorByTheme($active-theme,color-secondary);
-    height: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    box-sizing: border-box;
-    padding: .5em;
+      &__name {
+         font-size: 6rem;
+      }
+      
+      &__description {
+         font-size: 1.5rem;
+      }
+   }
 
-    span{
-       font-weight: 400;
-       a{
-           font-weight: bold;
-       } 
-    }
-
-    figure {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        text-align: center;
-        top: 5px;
-
-        img{
-            height: 95px;
-            background-color: white;
-            border-radius: 50%;
-            position: absolute;
-        }
-    }
-}
-
-section{
-    box-sizing: border-box;
-    box-shadow: 0 0 .5em grey;
-    margin: .5em;
-    padding: $padding;
-    border-radius: $border-radius;
 }

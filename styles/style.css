@@ -1,13 +1,36 @@
 /*-----------------*\
-|     Variables     |
-\*-----------------*/
-/*-----------------*\
 |     Functions     |
 \*-----------------*/
 /*-----------------*\
+|     Variables     |
+\*-----------------*/
+.portfolio, .about, .skills, .contact {
+  background-color: #bfbfbf;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.section__content__heading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  color: #4d4d4d;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .section__content__heading {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+
+/*-----------------*\
 |     Utilities     |
 \*-----------------*/
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,34 +46,134 @@ header {
 |         $LAYOUT          |
 \*------------------------*/
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Raleway", Geneva, Tahoma, sans-serif;
 }
 
-header {
+.section__border {
+  position: absolute;
+  height: 100%;
+  width: 2rem;
+  background-color: #737373;
+}
+
+.section__border__decorator {
+  background-color: #737373;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  border-radius: 100%;
+  top: 9.5rem;
+  left: 0.2rem;
+}
+
+.section__content {
+  padding-left: 3rem;
+  padding-right: 1rem;
+  padding-top: 8rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*------------------------*\ 
+|      HEADER STYLES       |
+\*------------------------*/
+.header {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #662e1c;
-  padding: 0.8rem;
+  padding: 1rem 5rem;
+  position: fixed;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 100000000;
+  font-size: 1.6rem;
 }
 
-header figure.main-logo {
-  max-width: 45px;
+.header__logo {
+  max-width: 5rem;
 }
 
-header figure.main-logo img {
+.header__logo img {
   width: 100%;
 }
 
-header ul li {
-  margin-left: 10px;
-  margin-right: 10px;
+.header ul li {
+  margin: 0 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 1rem;
 }
 
-header ul li a {
+.header ul li:hover {
+  -webkit-transform: translateY(-0.2rem) scale(1.1);
+          transform: translateY(-0.2rem) scale(1.1);
+}
+
+.header ul li a {
   color: white;
 }
 
+.header ul li.bordered {
+  border: 0.2rem solid white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.header.colored {
+  background-color: rgba(102, 46, 28, 0.9);
+  -webkit-box-shadow: 0 0.5rem 2rem black;
+          box-shadow: 0 0.5rem 2rem black;
+}
+
+/*------------------------*\ 
+|      BANNER STYLES       |
+\*------------------------*/
+.banner {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(102, 46, 28, 0.4)), to(rgba(102, 46, 28, 0.2))), url("../images/default-fondo.jpeg");
+  background-image: linear-gradient(rgba(102, 46, 28, 0.4) 0%, rgba(102, 46, 28, 0.2)), url("../images/default-fondo.jpeg");
+  height: 100vh;
+  position: relative;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-align: center;
+}
+
+.banner__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  color: #bfbfbf;
+}
+
+.banner__name {
+  font-size: 15rem;
+}
+
+.banner__description {
+  font-size: 3rem;
+}
+
+/*------------------------*\ 
+|    PORTFOLIO STYLES      |
+\*------------------------*/
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+/*------------------------*\ 
+|      FOOTER STYLES       |
+\*------------------------*/
 footer {
   background-color: #c9a66b;
   height: 50px;
@@ -88,32 +211,1287 @@ footer figure img {
   height: 95px;
   background-color: white;
   border-radius: 50%;
-  position: absolute;
 }
 
-section {
+@media screen and (max-width: 767px) {
+  .section__border {
+    display: none;
+  }
+  .section__border__decorator {
+    display: none;
+  }
+  .section__content {
+    padding: 0;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .banner__info {
+    width: 80%;
+  }
+  .banner__name {
+    font-size: 10rem;
+  }
+  .banner__description {
+    font-size: 1.5rem;
+  }
+  .header {
+    padding: 1rem;
+  }
+  __logo img {
+    min-width: 50px;
+  }
+  .portfolio__border {
+    display: none;
+  }
+  .portfolio__content {
+    padding: 0;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .about__border {
+    display: none;
+  }
+  .about__content {
+    padding: 0;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .about__heading {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header ul li {
+    font-size: 1.2rem;
+  }
+  .banner__info {
+    width: 80%;
+  }
+  .banner__name {
+    font-size: 6rem;
+  }
+  .banner__description {
+    font-size: 1.5rem;
+  }
+}
+
+/*------------------------*\ 
+|    PORTFOLIO STYLES      |
+\*------------------------*/
+.portfolio__card {
+  background: #dbd9d9;
+  width: 98%;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0.2rem 1rem black;
+          box-shadow: 0 0.2rem 1rem black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio__card:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.portfolio__card__info {
+  font-size: 1.6rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 48%;
+  margin: 1%;
+}
+
+.portfolio__card__title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #c9a66b;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  padding-bottom: .6rem;
+}
+
+.portfolio__card__tech {
+  font-size: inherit;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #737373;
+  margin-bottom: 2rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #737373;
+}
+
+.portfolio__card__date {
+  padding-bottom: .4rem;
+}
+
+.portfolio__card__link {
+  padding-bottom: 1rem;
+}
+
+.portfolio__card__link-content {
+  color: inherit;
+  text-decoration: underline;
+  padding: .2rem .5rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.portfolio__card__link-content:hover {
+  background: #bfbfbf;
+}
+
+.portfolio__card__description {
+  text-align: justify;
+}
+
+.portfolio__card__figure {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 48%;
+  margin: 1%;
+}
+
+.portfolio__card__image {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__card {
+    padding: 2rem;
+    width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolio__card__info {
+    width: 100%;
+    font-size: 1.2rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .portfolio__card__figure {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    margin: 0%;
+  }
+  .portfolio__card__image {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  .portfolio__card__title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .portfolio__card__tech {
+    text-align: center;
+  }
+}
+
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+.about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__image-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.about__name-box {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 2rem;
+  border-radius: 2px;
+}
+
+.about__subtitle-responsive {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 2rem;
+  border-radius: 2px;
+}
+
+.about__subtitle-responsive__text {
+  font-weight: 500;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: rgba(201, 166, 107, 0.5);
+}
+
+.about__firstname, .about__lastname {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: rgba(201, 166, 107, 0.5);
+}
+
+.about__firstname {
+  font-weight: 300;
+}
+
+.about__lastname {
+  font-weight: 500;
+}
+
+.about__name-line {
+  position: absolute;
+  top: 25%;
+  left: 60%;
+  display: block;
+  width: 35%;
+  height: .1rem;
+  background-color: rgba(201, 166, 107, 0.5);
+}
+
+.about__image {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  -webkit-filter: opacity(0.8) grayscale(60%);
+          filter: opacity(0.8) grayscale(60%);
+}
+
+.about__description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.about__description-title {
+  width: 90%;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(102, 46, 28, 0.5);
+}
+
+.about__description-subtitle {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  width: 90%;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: rgba(102, 46, 28, 0.8);
+}
+
+.about__description-contentbox {
+  position: relative;
+  padding-right: 7rem;
+}
+
+.about__description-content {
+  width: 70%;
+  float: right;
+}
+
+.about__description-bar {
+  position: absolute;
+  top: .6rem;
+  height: .3rem;
+  width: 25%;
+  background-color: rgba(102, 46, 28, 0.5);
+}
+
+.about__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about__skills__skill-name {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .about__firstname, .about__lastname {
+    font-size: 4rem;
+  }
+  .about__description-bar {
+    display: none;
+  }
+  .about__description-contentbox {
+    padding-right: initial;
+  }
+  .about__description-content {
+    width: 90%;
+    float: left;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__firstname, .about__lastname {
+    font-size: 4rem;
+  }
+  .about__description {
+    font-size: 1.4rem;
+  }
+  .about__description-title {
+    display: none;
+  }
+  .about__description-subtitle {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: rgba(102, 46, 28, 0.5) solid 2px;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .about__description-content {
+    float: initial;
+  }
+  .about__image {
+    width: 50%;
+  }
+  .about__subtitle-responsive {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about__firstname, .about__lastname {
+    font-size: 1.5rem;
+  }
+  .about__subtitle-responsive__text {
+    font-size: 1.5rem;
+    display: block;
+  }
+  .about__description-subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+/*------------------------*\ 
+|       ABOUT STYLES       |
+\*------------------------*/
+.skills__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60vh;
+}
+
+/*------------------------*\ 
+|      SKILLS STYLES       |
+\*------------------------*/
+.progress-circle {
+  font-size: 20px;
+  margin: 20px;
+  position: relative;
+  /* so that children can be absolutely positioned */
+  padding: 0;
+  width: 5em;
+  height: 5em;
+  background-color: #F2E9E1;
+  border-radius: 50%;
+  line-height: 5em;
+}
+
+.progress-circle:after {
+  border: none;
+  position: absolute;
+  top: 0.35em;
+  left: 0.35em;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  width: 4.3em;
+  height: 4.3em;
+  background-color: #bfbfbf;
+  content: " ";
+}
+
+/* Text inside the control */
+.progress-circle span {
+  position: absolute;
+  line-height: 5em;
+  width: 5em;
+  text-align: center;
+  display: block;
+  color: #4d4d4d;
+  z-index: 2;
+}
+
+.left-half-clipper {
+  /* a round circle */
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  /* needed for clipping */
+  clip: rect(0, 5em, 5em, 2.5em);
+  /* clips the whole left half*/
+}
+
+/* when p>50, don't clip left half*/
+.progress-circle.over50 .left-half-clipper {
+  clip: rect(auto, auto, auto, auto);
+}
+
+.value-bar {
+  /*This is an overlayed square, that is made round with the border radius,
+   then it is cut to display only the left half, then rotated clockwise
+   to escape the outer clipping path.*/
+  position: absolute;
+  /*needed for clipping*/
+  clip: rect(0, 2.5em, 5em, 0);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 0.45em solid #c9a66b;
+  /*The border is 0.35 but making it larger removes visual artifacts */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: 0 0 .5em grey;
-          box-shadow: 0 0 .5em grey;
-  margin: .5em;
-  padding: 0.8rem;
-  border-radius: 4px;
+}
+
+/* Progress bar filling the whole right half for values above 50% */
+.progress-circle.over50 .first50-bar {
+  /*Progress bar for the first 50%, filling the whole right half*/
+  position: absolute;
+  /*needed for clipping*/
+  clip: rect(0, 5em, 5em, 2.5em);
+  background-color: #c9a66b;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+}
+
+.progress-circle:not(.over50) .first50-bar {
+  display: none;
+}
+
+/* Progress bar rotation position */
+.progress-circle.p0 .value-bar {
+  display: none;
+}
+
+.progress-circle.p1 .value-bar {
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
+}
+
+.progress-circle.p2 .value-bar {
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+}
+
+.progress-circle.p3 .value-bar {
+  -webkit-transform: rotate(11deg);
+          transform: rotate(11deg);
+}
+
+.progress-circle.p4 .value-bar {
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
+}
+
+.progress-circle.p5 .value-bar {
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+}
+
+.progress-circle.p6 .value-bar {
+  -webkit-transform: rotate(22deg);
+          transform: rotate(22deg);
+}
+
+.progress-circle.p7 .value-bar {
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.progress-circle.p8 .value-bar {
+  -webkit-transform: rotate(29deg);
+          transform: rotate(29deg);
+}
+
+.progress-circle.p9 .value-bar {
+  -webkit-transform: rotate(32deg);
+          transform: rotate(32deg);
+}
+
+.progress-circle.p10 .value-bar {
+  -webkit-transform: rotate(36deg);
+          transform: rotate(36deg);
+}
+
+.progress-circle.p11 .value-bar {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.progress-circle.p12 .value-bar {
+  -webkit-transform: rotate(43deg);
+          transform: rotate(43deg);
+}
+
+.progress-circle.p13 .value-bar {
+  -webkit-transform: rotate(47deg);
+          transform: rotate(47deg);
+}
+
+.progress-circle.p14 .value-bar {
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+.progress-circle.p15 .value-bar {
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg);
+}
+
+.progress-circle.p16 .value-bar {
+  -webkit-transform: rotate(58deg);
+          transform: rotate(58deg);
+}
+
+.progress-circle.p17 .value-bar {
+  -webkit-transform: rotate(61deg);
+          transform: rotate(61deg);
+}
+
+.progress-circle.p18 .value-bar {
+  -webkit-transform: rotate(65deg);
+          transform: rotate(65deg);
+}
+
+.progress-circle.p19 .value-bar {
+  -webkit-transform: rotate(68deg);
+          transform: rotate(68deg);
+}
+
+.progress-circle.p20 .value-bar {
+  -webkit-transform: rotate(72deg);
+          transform: rotate(72deg);
+}
+
+.progress-circle.p21 .value-bar {
+  -webkit-transform: rotate(76deg);
+          transform: rotate(76deg);
+}
+
+.progress-circle.p22 .value-bar {
+  -webkit-transform: rotate(79deg);
+          transform: rotate(79deg);
+}
+
+.progress-circle.p23 .value-bar {
+  -webkit-transform: rotate(83deg);
+          transform: rotate(83deg);
+}
+
+.progress-circle.p24 .value-bar {
+  -webkit-transform: rotate(86deg);
+          transform: rotate(86deg);
+}
+
+.progress-circle.p25 .value-bar {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.progress-circle.p26 .value-bar {
+  -webkit-transform: rotate(94deg);
+          transform: rotate(94deg);
+}
+
+.progress-circle.p27 .value-bar {
+  -webkit-transform: rotate(97deg);
+          transform: rotate(97deg);
+}
+
+.progress-circle.p28 .value-bar {
+  -webkit-transform: rotate(101deg);
+          transform: rotate(101deg);
+}
+
+.progress-circle.p29 .value-bar {
+  -webkit-transform: rotate(104deg);
+          transform: rotate(104deg);
+}
+
+.progress-circle.p30 .value-bar {
+  -webkit-transform: rotate(108deg);
+          transform: rotate(108deg);
+}
+
+.progress-circle.p31 .value-bar {
+  -webkit-transform: rotate(112deg);
+          transform: rotate(112deg);
+}
+
+.progress-circle.p32 .value-bar {
+  -webkit-transform: rotate(115deg);
+          transform: rotate(115deg);
+}
+
+.progress-circle.p33 .value-bar {
+  -webkit-transform: rotate(119deg);
+          transform: rotate(119deg);
+}
+
+.progress-circle.p34 .value-bar {
+  -webkit-transform: rotate(122deg);
+          transform: rotate(122deg);
+}
+
+.progress-circle.p35 .value-bar {
+  -webkit-transform: rotate(126deg);
+          transform: rotate(126deg);
+}
+
+.progress-circle.p36 .value-bar {
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+}
+
+.progress-circle.p37 .value-bar {
+  -webkit-transform: rotate(133deg);
+          transform: rotate(133deg);
+}
+
+.progress-circle.p38 .value-bar {
+  -webkit-transform: rotate(137deg);
+          transform: rotate(137deg);
+}
+
+.progress-circle.p39 .value-bar {
+  -webkit-transform: rotate(140deg);
+          transform: rotate(140deg);
+}
+
+.progress-circle.p40 .value-bar {
+  -webkit-transform: rotate(144deg);
+          transform: rotate(144deg);
+}
+
+.progress-circle.p41 .value-bar {
+  -webkit-transform: rotate(148deg);
+          transform: rotate(148deg);
+}
+
+.progress-circle.p42 .value-bar {
+  -webkit-transform: rotate(151deg);
+          transform: rotate(151deg);
+}
+
+.progress-circle.p43 .value-bar {
+  -webkit-transform: rotate(155deg);
+          transform: rotate(155deg);
+}
+
+.progress-circle.p44 .value-bar {
+  -webkit-transform: rotate(158deg);
+          transform: rotate(158deg);
+}
+
+.progress-circle.p45 .value-bar {
+  -webkit-transform: rotate(162deg);
+          transform: rotate(162deg);
+}
+
+.progress-circle.p46 .value-bar {
+  -webkit-transform: rotate(166deg);
+          transform: rotate(166deg);
+}
+
+.progress-circle.p47 .value-bar {
+  -webkit-transform: rotate(169deg);
+          transform: rotate(169deg);
+}
+
+.progress-circle.p48 .value-bar {
+  -webkit-transform: rotate(173deg);
+          transform: rotate(173deg);
+}
+
+.progress-circle.p49 .value-bar {
+  -webkit-transform: rotate(176deg);
+          transform: rotate(176deg);
+}
+
+.progress-circle.p50 .value-bar {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.progress-circle.p51 .value-bar {
+  -webkit-transform: rotate(184deg);
+          transform: rotate(184deg);
+}
+
+.progress-circle.p52 .value-bar {
+  -webkit-transform: rotate(187deg);
+          transform: rotate(187deg);
+}
+
+.progress-circle.p53 .value-bar {
+  -webkit-transform: rotate(191deg);
+          transform: rotate(191deg);
+}
+
+.progress-circle.p54 .value-bar {
+  -webkit-transform: rotate(194deg);
+          transform: rotate(194deg);
+}
+
+.progress-circle.p55 .value-bar {
+  -webkit-transform: rotate(198deg);
+          transform: rotate(198deg);
+}
+
+.progress-circle.p56 .value-bar {
+  -webkit-transform: rotate(202deg);
+          transform: rotate(202deg);
+}
+
+.progress-circle.p57 .value-bar {
+  -webkit-transform: rotate(205deg);
+          transform: rotate(205deg);
+}
+
+.progress-circle.p58 .value-bar {
+  -webkit-transform: rotate(209deg);
+          transform: rotate(209deg);
+}
+
+.progress-circle.p59 .value-bar {
+  -webkit-transform: rotate(212deg);
+          transform: rotate(212deg);
+}
+
+.progress-circle.p60 .value-bar {
+  -webkit-transform: rotate(216deg);
+          transform: rotate(216deg);
+}
+
+.progress-circle.p61 .value-bar {
+  -webkit-transform: rotate(220deg);
+          transform: rotate(220deg);
+}
+
+.progress-circle.p62 .value-bar {
+  -webkit-transform: rotate(223deg);
+          transform: rotate(223deg);
+}
+
+.progress-circle.p63 .value-bar {
+  -webkit-transform: rotate(227deg);
+          transform: rotate(227deg);
+}
+
+.progress-circle.p64 .value-bar {
+  -webkit-transform: rotate(230deg);
+          transform: rotate(230deg);
+}
+
+.progress-circle.p65 .value-bar {
+  -webkit-transform: rotate(234deg);
+          transform: rotate(234deg);
+}
+
+.progress-circle.p66 .value-bar {
+  -webkit-transform: rotate(238deg);
+          transform: rotate(238deg);
+}
+
+.progress-circle.p67 .value-bar {
+  -webkit-transform: rotate(241deg);
+          transform: rotate(241deg);
+}
+
+.progress-circle.p68 .value-bar {
+  -webkit-transform: rotate(245deg);
+          transform: rotate(245deg);
+}
+
+.progress-circle.p69 .value-bar {
+  -webkit-transform: rotate(248deg);
+          transform: rotate(248deg);
+}
+
+.progress-circle.p70 .value-bar {
+  -webkit-transform: rotate(252deg);
+          transform: rotate(252deg);
+}
+
+.progress-circle.p71 .value-bar {
+  -webkit-transform: rotate(256deg);
+          transform: rotate(256deg);
+}
+
+.progress-circle.p72 .value-bar {
+  -webkit-transform: rotate(259deg);
+          transform: rotate(259deg);
+}
+
+.progress-circle.p73 .value-bar {
+  -webkit-transform: rotate(263deg);
+          transform: rotate(263deg);
+}
+
+.progress-circle.p74 .value-bar {
+  -webkit-transform: rotate(266deg);
+          transform: rotate(266deg);
+}
+
+.progress-circle.p75 .value-bar {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.progress-circle.p76 .value-bar {
+  -webkit-transform: rotate(274deg);
+          transform: rotate(274deg);
+}
+
+.progress-circle.p77 .value-bar {
+  -webkit-transform: rotate(277deg);
+          transform: rotate(277deg);
+}
+
+.progress-circle.p78 .value-bar {
+  -webkit-transform: rotate(281deg);
+          transform: rotate(281deg);
+}
+
+.progress-circle.p79 .value-bar {
+  -webkit-transform: rotate(284deg);
+          transform: rotate(284deg);
+}
+
+.progress-circle.p80 .value-bar {
+  -webkit-transform: rotate(288deg);
+          transform: rotate(288deg);
+}
+
+.progress-circle.p81 .value-bar {
+  -webkit-transform: rotate(292deg);
+          transform: rotate(292deg);
+}
+
+.progress-circle.p82 .value-bar {
+  -webkit-transform: rotate(295deg);
+          transform: rotate(295deg);
+}
+
+.progress-circle.p83 .value-bar {
+  -webkit-transform: rotate(299deg);
+          transform: rotate(299deg);
+}
+
+.progress-circle.p84 .value-bar {
+  -webkit-transform: rotate(302deg);
+          transform: rotate(302deg);
+}
+
+.progress-circle.p85 .value-bar {
+  -webkit-transform: rotate(306deg);
+          transform: rotate(306deg);
+}
+
+.progress-circle.p86 .value-bar {
+  -webkit-transform: rotate(310deg);
+          transform: rotate(310deg);
+}
+
+.progress-circle.p87 .value-bar {
+  -webkit-transform: rotate(313deg);
+          transform: rotate(313deg);
+}
+
+.progress-circle.p88 .value-bar {
+  -webkit-transform: rotate(317deg);
+          transform: rotate(317deg);
+}
+
+.progress-circle.p89 .value-bar {
+  -webkit-transform: rotate(320deg);
+          transform: rotate(320deg);
+}
+
+.progress-circle.p90 .value-bar {
+  -webkit-transform: rotate(324deg);
+          transform: rotate(324deg);
+}
+
+.progress-circle.p91 .value-bar {
+  -webkit-transform: rotate(328deg);
+          transform: rotate(328deg);
+}
+
+.progress-circle.p92 .value-bar {
+  -webkit-transform: rotate(331deg);
+          transform: rotate(331deg);
+}
+
+.progress-circle.p93 .value-bar {
+  -webkit-transform: rotate(335deg);
+          transform: rotate(335deg);
+}
+
+.progress-circle.p94 .value-bar {
+  -webkit-transform: rotate(338deg);
+          transform: rotate(338deg);
+}
+
+.progress-circle.p95 .value-bar {
+  -webkit-transform: rotate(342deg);
+          transform: rotate(342deg);
+}
+
+.progress-circle.p96 .value-bar {
+  -webkit-transform: rotate(346deg);
+          transform: rotate(346deg);
+}
+
+.progress-circle.p97 .value-bar {
+  -webkit-transform: rotate(349deg);
+          transform: rotate(349deg);
+}
+
+.progress-circle.p98 .value-bar {
+  -webkit-transform: rotate(353deg);
+          transform: rotate(353deg);
+}
+
+.progress-circle.p99 .value-bar {
+  -webkit-transform: rotate(356deg);
+          transform: rotate(356deg);
+}
+
+.progress-circle.p100 .value-bar {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+/*------------------------*\ 
+|     SKILLS BAR STYLES    |
+\*------------------------*/
+.skills__skills--bars {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skills__skill-bar {
+  background: #737373;
+  position: relative;
+  width: 100%;
+  max-width: 100px;
+  height: 100%;
+  max-height: calc( 60vh - 4rem);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.skills__skill-bar__title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #737373;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 900;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 1;
+}
+
+.skills__skill-bar__nivel {
+  background: #737373;
+  position: relative;
+  background: #bfbfbf;
+  bottom: 0;
+  width: inherit !important;
+  height: calc( 60vh - 4rem);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.skills__skill-bar__nivel__fill {
+  position: absolute;
+  height: 10%;
+  background-color: #c9a66b;
+  border-left: 0.5rem solid #bb9046;
+  width: 80%;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.skills__skill-bar__nivel__value {
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: calc( 50% - 2rem);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 4rem;
+  z-index: 1;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 767px) {
+  .skills__info {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .skills__skills--bars {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skills__skill-bar {
+    margin: initial;
+    margin-bottom: 1rem;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    max-height: 50px;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 3px solid black;
+  }
+  .skills__skill-bar__title {
+    position: relative;
+    width: 30%;
+  }
+  .skills__skill-bar__nivel {
+    position: relative;
+    bottom: initial;
+    height: auto;
+  }
+  .skills__skill-bar__nivel__fill {
+    height: 100% !important;
+    border: 0;
+    width: 0%;
+    margin: initial;
+  }
+  .skills__skill-bar__nivel__value {
+    top: calc( 50% - 1.5rem);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .skills__skill-bar:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+/*------------------------*\ 
+|      CONTACT STYLES      |
+\*------------------------*/
+.contact {
+  padding-bottom: initial;
+}
+
+.contact .section__border {
+  background-color: #8c8c8c;
+}
+
+.contact .section__border__decorator {
+  background-color: #8c8c8c;
+}
+
+.contact .section__content {
+  height: auto;
+  padding-bottom: 6rem;
+  background-color: #737373;
+}
+
+.contact .section__content__heading {
+  color: #8c8c8c;
+}
+
+.contact__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 2rem;
+}
+
+.contact__contact-me {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 2rem;
+}
+
+.contact__contact-me h1 {
+  font-size: 4rem;
+  padding-left: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact__contact-me h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact__social-media-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contact__social-media-box__element {
+  font-size: 8rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact__contact-me {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0 2rem;
+  }
+  .contact__contact-me h1 {
+    font-size: 2.5rem;
+    padding-left: initial;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .contact__contact-me h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .contact__social-media-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contact__social-media-box__element {
+    font-size: 6rem;
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact__contact-me {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+  }
+  .contact__contact-me h1 {
+    font-size: 1.8rem;
+    padding-left: initial;
+    text-align: center;
+  }
+  .contact__contact-me h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .contact__social-media-box {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Reset Default */
-body {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
-figure {
-  margin: 0;
+html {
+  font-size: 62.5%;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,7 +1502,19 @@ a {
   text-decoration: none;
 }
 
-section {
-  min-height: 80vh;
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3e3e3e80;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #737373;
 }
 /*# sourceMappingURL=style.css.map */
