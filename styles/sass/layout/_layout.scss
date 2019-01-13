@@ -155,7 +155,7 @@ body {
 |      FOOTER STYLES       |
 \*------------------------*/ 
 footer {
-   background-color: colorByTheme($active-theme,color-secondary);
+   background-color: colorByTheme($active-theme,color-darkgrey);
    height: 50px;
    margin-bottom: 50px;
    display: flex;
@@ -166,6 +166,8 @@ footer {
 
    span {
       font-weight: 400;
+      font-size: 1.5rem;
+      color: colorByTheme($active-theme,color-white);
       a {
          font-weight: bold;
       } 
@@ -267,6 +269,25 @@ footer {
             text-align: center;
         }
 
+    }
+
+    footer {
+      margin-bottom: initial;
+      
+      figure {
+
+         position: absolute;
+         left: auto;
+         right: 10px;
+         margin: initial;
+         text-align: initial;
+         top: 2.5px;
+
+         img{
+            background-color: white;
+            height: 45px;
+         }
+      }
     }
 }
 

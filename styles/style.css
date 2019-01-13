@@ -175,7 +175,7 @@ body {
 |      FOOTER STYLES       |
 \*------------------------*/
 footer {
-  background-color: #c9a66b;
+  background-color: #4d4d4d;
   height: 50px;
   margin-bottom: 50px;
   display: -webkit-box;
@@ -192,6 +192,8 @@ footer {
 
 footer span {
   font-weight: 400;
+  font-size: 1.5rem;
+  color: white;
 }
 
 footer span a {
@@ -263,6 +265,21 @@ footer figure img {
     font-size: 3rem;
     padding-bottom: 1.5rem;
     text-align: center;
+  }
+  footer {
+    margin-bottom: initial;
+  }
+  footer figure {
+    position: absolute;
+    left: auto;
+    right: 10px;
+    margin: initial;
+    text-align: initial;
+    top: 2.5px;
+  }
+  footer figure img {
+    background-color: white;
+    height: 45px;
   }
 }
 
