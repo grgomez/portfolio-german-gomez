@@ -132,8 +132,11 @@ body {
   margin: 0;
   padding: 0;
   border-radius: 0;
+  /*
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 77, 77, 0.4)), to(rgba(77, 77, 77, 0.2))), url("../images/default-fondo.jpeg");
   background-image: linear-gradient(rgba(77, 77, 77, 0.4) 0%, rgba(77, 77, 77, 0.2)), url("../images/default-fondo.jpeg");
+  */
+  background-color: #361F27;
   height: 100vh;
   position: relative;
   -webkit-box-shadow: none;
@@ -148,7 +151,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
-  color: #bfbfbf;
+  color: #F5F8DE;
 }
 
 .banner__name {
@@ -175,7 +178,7 @@ body {
 |      FOOTER STYLES       |
 \*------------------------*/
 footer {
-  background-color: #4d4d4d;
+  background-color: #F46036;
   height: 50px;
   margin-bottom: 50px;
   display: -webkit-box;
@@ -1406,21 +1409,21 @@ footer figure img {
 }
 
 .contact .section__border {
-  background: #bfbfbf;
+  background: #F46036;
 }
 
 .contact .section__border__decorator {
-  background: #bfbfbf;
+  background: #F46036;
 }
 
 .contact .section__content {
   height: auto;
   padding-bottom: 6rem;
-  background-color: #737373;
+  background-color: #0A2239;
 }
 
 .contact .section__content__heading {
-  color: #8c8c8c;
+  color: #F5F8DE;
 }
 
 .contact__info {
@@ -1440,13 +1443,13 @@ footer figure img {
 .contact__contact-me h1 {
   font-size: 4rem;
   padding-left: 2rem;
-  background-color: rgba(31, 30, 30, 0.5);
-  color: #8c8c8c;
+  background-color: #554640;
+  color: #F5F8DE;
 }
 
 .contact__contact-me h2 {
   background-color: rgba(31, 30, 30, 0.2);
-  color: #8c8c8c;
+  color: #F5F8DE;
   padding-left: .5rem;
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -1466,7 +1469,8 @@ footer figure img {
 
 .contact__social-media-box__element {
   font-size: 8rem;
-  color: rgba(31, 30, 30, 0.5);
+  /*color: rgba(31, 30, 30, 0.5);*/
+  color: #F5F8DE
 }
 
 @media screen and (max-width: 1024px) {
